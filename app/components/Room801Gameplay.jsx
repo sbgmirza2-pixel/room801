@@ -47,7 +47,8 @@ export default function Room801Gameplay() {
                   {step.title}
                 </h3>
               </div>
-              <p className="text-xs sm:text-sm text-[#a9b0ba] leading-relaxed pl-7">
+              {/* Normal text size applied here */}
+              <p className="text-sm sm:text-base text-[#a9b0ba] leading-relaxed pl-7">
                 {step.description}
               </p>
             </div>
