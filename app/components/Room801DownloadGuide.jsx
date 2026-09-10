@@ -38,7 +38,6 @@ export default function Room801DownloadGuide() {
         <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2 font-display text-[#E8E9E7]">
           How to Download Room 801 <span className="text-[#A9433E]">APK on Android?</span>
         </h2>
-        {/* Normal text size applied to subtitle */}
         <p className="text-sm sm:text-base text-[#747d8a] mb-6">
           Follow these simple steps to securely find, verify, and download Room 801 on your mobile device.
         </p>
