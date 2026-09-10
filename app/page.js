@@ -9,7 +9,9 @@ import Room801InstallGuide from "./components/Room801InstallGuides";
 import Room801ProsAndCons from "./components/Room801ProsAndCons";
 import Room801Comparison from "./components/Room801Comparison";
 import Room801Safety from "./components/Room801Safety";
-
+import Room801Requirements from "./components/Room801Requirements";
+import Room801Troubleshooting from "./components/Room801Troubleshooting";
+import Room801Conclusion from "./components/Room801Conclusion";
 export default function Home() {
   return (
     <div className="site-wrapper bg-darkBg min-h-screen">
@@ -54,12 +56,27 @@ export default function Home() {
 
             <hr className="w-full border-t border-[#59616D]/30 mb-6" />
 
-<Room801Safety />
+              <Room801Safety />
 
 
             {/* Horizontal Divider Line */}
 
             <hr className="w-full border-t border-[#59616D]/30 mb-6" />
+
+<Room801Requirements />
+            
+            {/* Horizontal Divider Line */}
+
+            <hr className="w-full border-t border-[#59616D]/30 mb-6" />
+
+
+
+<Room801Troubleshooting />
+
+            {/* Horizontal Divider Line */}
+
+            <hr className="w-full border-t border-[#59616D]/30 mb-6" />
+            <Room801Conclusion />
       </main>
     </div>
   );
