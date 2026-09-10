@@ -111,7 +111,6 @@ export default function Room801Features() {
         {/* Filter Tabs / Pills Bar */}
         <div className="flex flex-wrap items-center gap-2 mb-8 font-sans">
           {categories.map((cat, idx) => {
-            const count = cat === 'All' ? features.length : features.filter(f => f.category === cat).length;
             const isActive = activeTab === cat;
             return (
               <button
@@ -123,13 +122,13 @@ export default function Room801Features() {
                     : 'bg-[#30363D] text-[#a9b0ba] border-[#59616D]/40 hover:border-[#A9433E]/50 hover:text-[#E8E9E7]'
                 }`}
               >
-                {cat === 'All' ? `All Features (${count})` : `${cat} (${count})`}
+                {cat}
               </button>
             );
           })}
         </div>
 
-        {/* Features Grid Cards Layout */}
+        {/* Features Grid Cards Layout (Category tabs work, but tags inside boxes are removed) */}
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 font-sans">
           {filteredFeatures.map((item, index) => (
             <div 
@@ -137,18 +136,9 @@ export default function Room801Features() {
               className="bg-gradient-to-br from-[#30363D] to-[#252930] border border-[#59616D]/40 hover:border-[#A9433E]/50 transition-all rounded-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.3)] flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-[10px] sm:text-xs text-[#A9433E] font-bold uppercase tracking-wider">
-                    {item.category}
-                  </span>
-                  <span className="text-[10px] text-[#747d8a] font-mono">
-                    #{index + 1}
-                  </span>
-                </div>
                 <h3 className="text-base sm:text-lg font-semibold text-[#E8E9E7] font-display mb-2">
                   {item.title}
                 </h3>
-                {/* Normal text size applied here */}
                 <p className="text-sm sm:text-base text-[#a9b0ba] leading-relaxed">
                   {item.description}
                 </p>
