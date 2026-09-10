@@ -37,15 +37,15 @@ export default function Room801Comparison() {
         {/* Horizontal Divider Line */}
         <hr className="w-full border-t border-[#59616D]/30 mb-8" />
 
-        {/* 3-Column Grid Layout with Glassmorphic Effect & Images */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 font-sans">
+        {/* Horizontal Row Layout to avoid blog-card feel */}
+        <div className="w-full max-w-4xl space-y-4 font-sans">
           {comparisons.map((item, index) => (
             <div 
               key={index} 
-              className="bg-[#252930]/60 backdrop-blur-md border border-[#59616D]/30 hover:border-[#A9433E]/60 transition-all rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.3)] flex flex-col justify-between"
+              className="bg-[#252930]/40 backdrop-blur-md border border-[#59616D]/30 hover:border-[#A9433E]/60 transition-all rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center gap-5 shadow-[0_4px_20px_rgb(0,0,0,0.2)]"
             >
-              {/* Game Thumbnail Image */}
-              <div className="w-full h-48 overflow-hidden relative border-b border-[#59616D]/20">
+              {/* Thumbnail Image on the Side */}
+              <div className="w-full sm:w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden border border-[#59616D]/30 relative">
                 <img 
                   src={item.image} 
                   alt={item.title} 
@@ -53,17 +53,15 @@ export default function Room801Comparison() {
                 />
               </div>
 
-              {/* Card Content */}
-              <div className="p-6 flex flex-col justify-between flex-grow">
-                <div>
-                  <h3 className="text-lg font-semibold text-[#E8E9E7] font-display mb-3 flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#A9433E]"></span>
-                    {item.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-[#a9b0ba] leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
+              {/* Content Details */}
+              <div className="flex flex-col justify-center flex-grow text-left">
+                <h3 className="text-lg font-semibold text-[#E8E9E7] font-display mb-2 flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#A9433E]"></span>
+                  {item.title}
+                </h3>
+                <p className="text-sm sm:text-base text-[#a9b0ba] leading-relaxed">
+                  {item.description}
+                </p>
               </div>
             </div>
           ))}
