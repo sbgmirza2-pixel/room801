@@ -1,23 +1,30 @@
-"use client";
+'use client';
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   const navLinks = [
-    { label: "Home", href: "#home" },
-    { label: "Features", href: "#features" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Home", href: isHomePage ? "#home" : "/#home" },
+    { label: "Features", href: isHomePage ? "#features" : "/#features" },
+    { label: "FAQ", href: isHomePage ? "#faqs" : "/#faqs" },
   ];
 
   useEffect(() => {
+    if (!isHomePage) return;
+
     const handleScroll = () => {
-      const sections = navLinks.map((link) => link.href.substring(1));
-      const scrollPosition = window.scrollY + 150;
+      const sections = ["home", "features", "faqs"];
+      const scrollPosition = window.scrollY + 200;
+
+      let currentSection = sections[0];
 
       for (const section of sections) {
         const el = document.getElementById(section);
@@ -25,22 +32,24 @@ export default function Navbar() {
           const top = el.offsetTop;
           const height = el.offsetHeight;
           if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(section);
+            currentSection = section;
             break;
           }
         }
       }
+      setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isHomePage]);
 
   return (
     <header className="navbar-wrapper">
       <div className="container nav-container">
-        {/* Brand Logo without Pulse Dot */}
-        <Link href="#home" className="brand-logo">
+        {/* Brand Logo */}
+        <Link href="/" className="brand-logo">
           <div className="logo-symbol">
             <Image 
               src="/room-801-apk-logo (1).webp" 
@@ -55,11 +64,11 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav className="desktop-nav">
           {navLinks.map((link) => {
-            const sectionId = link.href.substring(1);
-            const isActive = activeSection === sectionId;
+            const sectionId = link.href.includes('#') ? link.href.split('#')[1] : '';
+            const isActive = isHomePage && activeSection === sectionId;
             return (
               <a
-                key={link.href}
+                key={link.label}
                 href={link.href}
                 className={`nav-link ${isActive ? "nav-link-active" : ""}`}
               >
@@ -71,7 +80,7 @@ export default function Navbar() {
 
         {/* Action Button */}
         <div className="nav-actions">
-          <a href="#download" className="btn btn-primary btn-nav">
+          <a href={isHomePage ? "/download" : "/download"} className="btn btn-primary btn-nav">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
               <polyline points="7 10 12 15 17 10" />
@@ -98,11 +107,11 @@ export default function Navbar() {
         <div className="mobile-dropdown">
           <div className="container mobile-nav-links">
             {navLinks.map((link) => {
-              const sectionId = link.href.substring(1);
-              const isActive = activeSection === sectionId;
+              const sectionId = link.href.includes('#') ? link.href.split('#')[1] : '';
+              const isActive = isHomePage && activeSection === sectionId;
               return (
                 <a
-                  key={link.href}
+                  key={link.label}
                   href={link.href}
                   className={`mobile-nav-link ${isActive ? "mobile-nav-link-active" : ""}`}
                   onClick={() => setMobileMenuOpen(false)}
@@ -112,7 +121,7 @@ export default function Navbar() {
               );
             })}
             <a
-              href="#download"
+              href={isHomePage ? "/download" : "/download"}
               className="btn btn-primary mobile-btn-download"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -178,7 +187,7 @@ export default function Navbar() {
         .nav-link {
           font-size: 0.9rem;
           font-weight: 500;
-          color: #59616D;
+          color: #a9b0ba;
           padding: 8px 16px;
           border-radius: 8px;
           transition: all 0.2s ease;
@@ -271,7 +280,7 @@ export default function Navbar() {
 
         .mobile-nav-link {
           font-size: 1rem;
-          color: #59616D;
+          color: #a9b0ba;
           padding: 10px 16px;
           border-radius: 8px;
           text-decoration: none;

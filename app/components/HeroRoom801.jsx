@@ -34,7 +34,7 @@ export default function HeroRoom801() {
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center justify-start gap-3 mb-6">
           <a 
-            href="#download" 
+            href="/download" 
             className="inline-flex items-center gap-2.5 bg-[#A9433E] hover:bg-[#bd4c47] text-white font-semibold text-sm  px-6 py-3.5 rounded-xl shadow-[0_4px_16px_rgba(169,67,62,0.35)] transition-all no-underline"
           >
             <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">

@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Room 801 APK for Android - Official Download & Guide",
+  description: "Download Room 801 APK for Android and explore its looping hallway, strange anomalies, atmospheric sounds, simple controls, and suspenseful gameplay.",
+};
+
 import Navbar from "./components/Navbar";
 import HeroRoom801 from "./components/HeroRoom801";
 import WhatIsRoom801Page from "./components/WhatIsRoom801";
@@ -12,71 +17,70 @@ import Room801Safety from "./components/Room801Safety";
 import Room801Requirements from "./components/Room801Requirements";
 import Room801Troubleshooting from "./components/Room801Troubleshooting";
 import Room801Conclusion from "./components/Room801Conclusion";
+import Room801FAQs from "./components/Room801FAQs";
+import Room801Footer from "./components/Room801Footer";
+import Room801TableOfContents from "./components/Room801TableOfContents";
+import Room801Screenshots from "./components/Room801Screenshots";
+
 export default function Home() {
   return (
     <div className="site-wrapper bg-darkBg min-h-screen">
       <Navbar />
       <main>
-        <HeroRoom801 />
-         {/* Horizontal Divider Line */}
+        <div id="home">
+          <HeroRoom801 />
+        </div>
         <hr className="w-full border-t border-[#59616D]/30 mb-6" />
 
         <WhatIsRoom801Page />
-         {/* Horizontal Divider Line */}
+      
+        <Room801Screenshots />
         <hr className="w-full border-t border-[#59616D]/30 mb-6" />
 
         <Room801InfoSection />
-          {/* Horizontal Divider Line */}
-
-            <hr className="w-full border-t border-[#59616D]/30 mb-6" />
-        <Room801Gameplay />
-          {/* Horizontal Divider Line */}
-
-            <hr className="w-full border-t border-[#59616D]/30 mb-6" />
-        <Room801Features />
-        {/* Horizontal Divider Line */}
-
-            <hr className="w-full border-t border-[#59616D]/30 mb-6" />
-        <Room801DownloadGuide />
-         {/* Horizontal Divider Line */}
         <hr className="w-full border-t border-[#59616D]/30 mb-6" />
+
+        <Room801TableOfContents />
+        
+        <hr className="w-full border-t border-[#59616D]/30 mb-6" />
+
+        <Room801Gameplay />
+        <hr className="w-full border-t border-[#59616D]/30 mb-6" />
+
+        <div id="features">
+          <Room801Features />
+        </div>
+        <hr className="w-full border-t border-[#59616D]/30 mb-6" />
+
+        <Room801DownloadGuide />
+        <hr className="w-full border-t border-[#59616D]/30 mb-6" />
+
         <Room801InstallGuide />
+        <hr className="w-full border-t border-[#59616D]/30 mb-6" />
 
-            {/* Horizontal Divider Line */}
+        <Room801ProsAndCons />
+        <hr className="w-full border-t border-[#59616D]/30 mb-6" />
 
-            <hr className="w-full border-t border-[#59616D]/30 mb-6" />
-            <Room801ProsAndCons />
+        <Room801Comparison />
+        <hr className="w-full border-t border-[#59616D]/30 mb-6" />
 
-             {/* Horizontal Divider Line */}
+        <Room801Safety />
+        <hr className="w-full border-t border-[#59616D]/30 mb-6" />
 
-            <hr className="w-full border-t border-[#59616D]/30 mb-6" />
-            <Room801Comparison />
-             
-             {/* Horizontal Divider Line */}
+        <Room801Requirements />
+        <hr className="w-full border-t border-[#59616D]/30 mb-6" />
 
-            <hr className="w-full border-t border-[#59616D]/30 mb-6" />
+        <Room801Troubleshooting />
+        <hr className="w-full border-t border-[#59616D]/30 mb-6" />
 
-              <Room801Safety />
+        <Room801Conclusion />
+        <hr className="w-full border-t border-[#59616D]/30 mb-6" />
 
+        <div id="faqs">
+          <Room801FAQs />
+        </div>
 
-            {/* Horizontal Divider Line */}
-
-            <hr className="w-full border-t border-[#59616D]/30 mb-6" />
-
-<Room801Requirements />
-            
-            {/* Horizontal Divider Line */}
-
-            <hr className="w-full border-t border-[#59616D]/30 mb-6" />
-
-
-
-<Room801Troubleshooting />
-
-            {/* Horizontal Divider Line */}
-
-            <hr className="w-full border-t border-[#59616D]/30 mb-6" />
-            <Room801Conclusion />
+        <Room801Footer />
       </main>
     </div>
   );

@@ -11,7 +11,7 @@ export default function Room801Safety() {
   ];
 
   return (
-    <section className="w-full py-6 md:py-8 relative z-10">
+    <section id="safety" className="w-full py-6 md:py-8 relative z-10">
       <div className="site-container flex flex-col items-start text-left w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}

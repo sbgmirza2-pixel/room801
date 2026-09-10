@@ -25,6 +25,7 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -55,6 +56,7 @@ body::before {
   z-index: 0;
   opacity: 0.6;
 }
+
 
 .site-container {
   width: 100%;

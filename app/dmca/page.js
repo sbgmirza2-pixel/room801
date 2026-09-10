@@ -1,0 +1,38 @@
+import Navbar from '../components/Navbar';
+import Room801Footer from '../components/Room801Footer';
+
+export default function DmcaPage() {
+  return (
+    <div className="min-h-screen bg-[#202328] text-[#E8E9E7] font-sans flex flex-col">
+      <Navbar />
+      
+      <div className="h-20 sm:h-24 w-full"></div>
+
+      <main className="grow site-container max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 pb-16 w-full">
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6 font-display text-[#E8E9E7]">
+          DMCA
+        </h1>
+
+        <div className="space-y-6 text-[#a9b0ba] text-base leading-relaxed">
+          <p>
+            <strong className="text-[#E8E9E7]">Room801apk.com</strong> respects the rights of copyright owners. If you believe that any content published on our website violates your copyright, you can contact us with the relevant details.
+          </p>
+
+          <p>
+            Please include the name of the copyrighted work, the page or content you are referring to, and enough information to help us understand your claim.
+          </p>
+
+          <p>
+            After receiving a valid copyright complaint, we will review the reported content and take appropriate action where necessary.
+          </p>
+
+          <p>
+            For copyright-related requests, please contact us through the email address listed on our website.
+          </p>
+        </div>
+      </main>
+
+      <Room801Footer />
+    </div>
+  );
+}

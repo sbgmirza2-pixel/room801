@@ -94,7 +94,7 @@ export default function Room801Features() {
     : features.filter(item => item.category === activeTab);
 
   return (
-    <section className="w-full py-6 md:py-8 relative z-10">
+    <section id="features"className="w-full py-6 md:py-8 relative z-10">
       <div className="site-container flex flex-col items-start text-left w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
@@ -133,7 +133,7 @@ export default function Room801Features() {
           {filteredFeatures.map((item, index) => (
             <div 
               key={index}
-              className="bg-gradient-to-br from-[#30363D] to-[#252930] border border-[#59616D]/40 hover:border-[#A9433E]/50 transition-all rounded-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.3)] flex flex-col justify-between"
+              className="bg-linear-to-br from-[#30363D] to-[#252930] border border-[#59616D]/40 hover:border-[#A9433E]/50 transition-all rounded-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.3)] flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-2">

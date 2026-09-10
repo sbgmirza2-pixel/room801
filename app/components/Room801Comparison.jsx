@@ -23,7 +23,7 @@ export default function Room801Comparison() {
   ];
 
   return (
-    <section className="w-full py-6 md:py-8 relative z-10">
+    <section id= "comparison"className="w-full py-6 md:py-8 relative z-10">
       <div className="site-container flex flex-col items-start text-left w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
@@ -45,7 +45,7 @@ export default function Room801Comparison() {
               className="bg-[#252930]/40 backdrop-blur-md border border-[#59616D]/30 hover:border-[#A9433E]/60 transition-all rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center gap-5 shadow-[0_4px_20px_rgb(0,0,0,0.2)]"
             >
               {/* Thumbnail Image on the Side */}
-              <div className="w-full sm:w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden border border-[#59616D]/30 relative">
+              <div className="w-full sm:w-32 h-32 shrink-0 rounded-xl overflow-hidden border border-[#59616D]/30 relative">
                 <img 
                   src={item.image} 
                   alt={item.title} 
@@ -54,7 +54,7 @@ export default function Room801Comparison() {
               </div>
 
               {/* Content Details */}
-              <div className="flex flex-col justify-center flex-grow text-left">
+              <div className="flex flex-col justify-center grow text-left">
                 <h3 className="text-lg font-semibold text-[#E8E9E7] font-display mb-2 flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#A9433E]"></span>
                   {item.title}

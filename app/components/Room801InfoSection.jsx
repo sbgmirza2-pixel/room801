@@ -11,7 +11,7 @@ export default function Room801Info() {
   ];
 
   return (
-    <section className="w-full py-6 md:py-8 relative z-10">
+    <section id="overview" className="w-full py-6 md:py-8 relative z-10">
       <div className="site-container flex flex-col items-start text-left w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
@@ -30,7 +30,7 @@ export default function Room801Info() {
           {gameInfo.map((item, index) => (
             <div 
               key={index}
-              className="bg-gradient-to-br from-[#30363D] to-[#252930] border border-[#59616D]/40 hover:border-[#A9433E]/50 transition-all rounded-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.3)] flex flex-col justify-center"
+              className="bg-linear-to-br from-[#30363D] to-[#252930] border border-[#59616D]/40 hover:border-[#A9433E]/50 transition-all rounded-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.3)] flex flex-col justify-center"
             >
               <span className="text-[10px] sm:text-xs text-[#747d8a] font-bold uppercase tracking-wider mb-1.5">
                 {item.label}
