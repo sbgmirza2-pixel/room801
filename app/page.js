@@ -8,6 +8,7 @@ import Room801DownloadGuide from "./components/Room801DownloadGuide";
 import Room801InstallGuide from "./components/Room801InstallGuides";
 import Room801ProsAndCons from "./components/Room801ProsAndCons";
 import Room801Comparison from "./components/Room801Comparison";
+import Room801Safety from "./components/Room801Safety";
 
 export default function Home() {
   return (
@@ -48,7 +49,15 @@ export default function Home() {
 
             <hr className="w-full border-t border-[#59616D]/30 mb-6" />
             <Room801Comparison />
+             
              {/* Horizontal Divider Line */}
+
+            <hr className="w-full border-t border-[#59616D]/30 mb-6" />
+
+<Room801Safety />
+
+
+            {/* Horizontal Divider Line */}
 
             <hr className="w-full border-t border-[#59616D]/30 mb-6" />
       </main>
