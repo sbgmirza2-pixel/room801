@@ -18,10 +18,10 @@ export default function DownloadClient() {
   }, [timeLeft]);
 
   const handleDownload = () => {
-    const apkUrl = "#"; 
+    const apkUrl = "https://instagoldapk.net/downloads/room-801-apk-v2-3.zip"; 
     const link = document.createElement('a');
     link.href = apkUrl;
-    link.setAttribute('download', 'room-801.apk');
+    link.setAttribute('download', 'room-801-apk-v2-3.zip');
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -77,7 +77,7 @@ export default function DownloadClient() {
                 onClick={handleDownload}
                 className="inline-flex items-center gap-2 bg-[#A9433E] hover:bg-[#bd4a44] text-white font-bold px-9 py-4 rounded-xl text-lg shadow-lg shadow-[#A9433E]/40 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
               >
-                📥 Download Room 801 APK (v1.0)
+                📥 Download Room 801 APK (v2.3)
               </button>
             )}
           </div>
@@ -111,7 +111,7 @@ export default function DownloadClient() {
                   </tr>
                   <tr className="border-b border-[rgba(89,97,109,0.3)]">
                     <td className="p-4 font-semibold text-[#E8E9E7]">File Type</td>
-                    <td className="p-4 text-[#a9b0ba]">APK</td>
+                    <td className="p-4 text-[#a9b0ba]">ZIP / APK</td>
                   </tr>
                   <tr className="border-b border-[rgba(89,97,109,0.3)]">
                     <td className="p-4 font-semibold text-[#E8E9E7]">Platform</td>
@@ -143,9 +143,9 @@ export default function DownloadClient() {
               <li className="pl-1">Scroll to the download section on this page.</li>
               <li className="pl-1">Wait for the secure preparation countdown to complete.</li>
               <li className="pl-1">Tap the Download button.</li>
-              <li className="pl-1">Wait for the APK file to finish downloading.</li>
+              <li className="pl-1">Wait for the package file to finish downloading.</li>
               <li className="pl-1">Open your phone&apos;s Downloads folder.</li>
-              <li className="pl-1">Find the Room 801 APK file and check that the download is complete.</li>
+              <li className="pl-1">Find the Room 801 file and extract or install it.</li>
             </ol>
           </section>
 
@@ -155,7 +155,7 @@ export default function DownloadClient() {
               What To Do <span className="text-[#A9433E]">After</span> Download
             </h3>
             <p className="text-sm sm:text-base text-[#a9b0ba] font-sans leading-relaxed p-1">
-              After the APK download finishes, open your Downloads folder and find the Room 801 file. Check the file before you start the installation. If the download stops or the file looks incomplete, download it again instead of trying to install it.
+              After the download finishes, open your Downloads folder and find the Room 801 file. Check the file before you start the installation. If the download stops or the file looks incomplete, download it again instead of trying to install it.
             </p>
           </section>
         </div>
