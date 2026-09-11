@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Room 801 APK for Android - Official Download & Guide",
-  description: "Download Room 801 APK for Android and explore its looping hallway, strange anomalies, atmospheric sounds, simple controls, and suspenseful gameplay.",
+  title: "Room 801 APK v2.3 – Download Latest Version for Android",
+  description: "Download the latest Room 801 APK v2.3 for Android. Explore horror puzzle gameplay, eerie looping hallways, anomalies, guides, and safe installation steps.",
 };
 
 import Navbar from "./components/Navbar";

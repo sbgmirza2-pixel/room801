@@ -8,15 +8,29 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+
   const pathname = usePathname();
+
   const isHomePage = pathname === "/";
   const isBlogsPage = pathname.startsWith("/blogs");
 
   const navLinks = [
-    { label: "Home", href: isHomePage ? "#home" : "/#home" },
-    { label: "Features", href: isHomePage ? "#features" : "/#features" },
-    { label: "FAQs", href: isHomePage ? "#faqs" : "/#faqs" },
-    { label: "Blogs", href: "/blogs" },
+    {
+      label: "Home",
+      href: isHomePage ? "#home" : "/#home",
+    },
+    {
+      label: "Features",
+      href: isHomePage ? "#features" : "/#features",
+    },
+    {
+      label: "FAQs",
+      href: isHomePage ? "#faqs" : "/#faqs",
+    },
+    {
+      label: "Blogs",
+      href: "/blogs",
+    },
   ];
 
   useEffect(() => {
@@ -30,291 +44,295 @@ export default function Navbar() {
 
       for (const section of sections) {
         const el = document.getElementById(section);
+
         if (el) {
           const top = el.offsetTop;
           const height = el.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
+
+          if (
+            scrollPosition >= top &&
+            scrollPosition < top + height
+          ) {
             currentSection = section;
             break;
           }
         }
       }
+
       setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [isHomePage]);
 
+  const getIsActive = (link) => {
+    const isBlogLink = link.href === "/blogs";
+
+    const sectionId = link.href.includes("#")
+      ? link.href.split("#")[1]
+      : "";
+
+    return isBlogLink
+      ? isBlogsPage
+      : isHomePage && activeSection === sectionId;
+  };
+
   return (
-    <header className="navbar-wrapper">
-      <div className="container nav-container">
-        {/* Brand Logo */}
-        <Link href="/" className="brand-logo">
-          <div className="logo-symbol">
-            <Image 
-              src="/room-801-apk-logo (1).webp" 
-              alt="Room 801 Logo" 
-              width={32} 
-              height={32} 
+    <header
+      className="
+        sticky top-0 left-0 w-full z-[100]
+        bg-[#202328]/90
+        backdrop-blur-[14px]
+        border-b border-[#30363D]
+      "
+    >
+      {/* Main Navbar */}
+      <div
+        className="
+          flex items-center justify-between
+          h-[72px]
+          max-w-[1200px]
+          mx-auto
+          px-5
+        "
+      >
+        {/* Logo */}
+        <Link
+          href="/"
+          className="flex items-center gap-3 no-underline"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          <div
+            className="
+              relative
+              w-10 h-10
+              rounded-lg
+              bg-[#30363D]
+              border border-[#59616D]
+              flex items-center justify-center
+              transition-colors duration-200
+              hover:border-[#A9433E]
+            "
+          >
+            <Image
+              src="/room-801-apk-logo (1).webp"
+              alt="Room 801 Logo"
+              width={32}
+              height={32}
               className="object-contain"
+              priority
             />
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="desktop-nav">
+        <nav className="hidden min-[901px]:flex items-center gap-[6px]">
           {navLinks.map((link) => {
-            const isBlogLink = link.href === "/blogs";
-            const sectionId = link.href.includes('#') ? link.href.split('#')[1] : '';
-            const isActive = isBlogLink ? isBlogsPage : (isHomePage && activeSection === sectionId);
+            const isActive = getIsActive(link);
+
             return (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
-                className={`nav-link ${isActive ? "nav-link-active" : ""}`}
+                className={`
+                  text-[0.9rem]
+                  font-medium
+                  px-4 py-2
+                  rounded-lg
+                  no-underline
+                  transition-all duration-200
+                  ${
+                    isActive
+                      ? "text-[#E8E9E7] bg-[#30363D] border border-[rgba(169,67,62,0.4)]"
+                      : "text-[#a9b0ba] border border-transparent hover:bg-[#30363D] hover:text-[#E8E9E7] hover:border-[rgba(169,67,62,0.3)]"
+                  }
+                `}
               >
                 {link.label}
-              </a>
+              </Link>
             );
           })}
         </nav>
 
-        {/* Action Button */}
-        <div className="nav-actions">
-          <a href={isHomePage ? "/download" : "/download"} className="btn btn-primary btn-nav">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        {/* Right Actions */}
+        <div className="flex items-center gap-4">
+          {/* Desktop Download Button */}
+          <Link
+            href="/download"
+            className="
+              hidden min-[901px]:flex
+              items-center justify-center
+              gap-2
+              bg-[#A9433E]
+              text-[#E8E9E7]
+              px-[18px] py-2
+              rounded-lg
+              text-[0.88rem]
+              font-semibold
+              no-underline
+              transition-colors duration-200
+              hover:bg-[#953a37]
+            "
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
               <polyline points="7 10 12 15 17 10" />
               <line x1="12" y1="15" x2="12" y2="3" />
             </svg>
-            <span>Download APK</span>
-          </a>
 
-          {/* Mobile Menu Toggle */}
+            <span>Download APK</span>
+          </Link>
+
+          {/* Mobile Menu Button */}
           <button
-            className="mobile-toggle"
+            type="button"
             aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="
+              min-[901px]:hidden
+              flex flex-col
+              items-center justify-center
+              gap-[5px]
+              p-[6px]
+              bg-transparent
+              border-0
+              cursor-pointer
+          "
           >
-            <span className={`bar ${mobileMenuOpen ? "bar-open-1" : ""}`}></span>
-            <span className={`bar ${mobileMenuOpen ? "bar-open-2" : ""}`}></span>
-            <span className={`bar ${mobileMenuOpen ? "bar-open-3" : ""}`}></span>
+            <span
+              className={`
+                block
+                w-[22px]
+                h-[2px]
+                bg-[#E8E9E7]
+                transition-all duration-200
+                origin-center
+                ${
+                  mobileMenuOpen
+                    ? "translate-y-[7px] rotate-45"
+                    : ""
+                }
+              `}
+            />
+
+            <span
+              className={`
+                block
+                w-[22px]
+                h-[2px]
+                bg-[#E8E9E7]
+                transition-all duration-200
+                ${
+                  mobileMenuOpen
+                    ? "opacity-0"
+                    : "opacity-100"
+                }
+              `}
+            />
+
+            <span
+              className={`
+                block
+                w-[22px]
+                h-[2px]
+                bg-[#E8E9E7]
+                transition-all duration-200
+                origin-center
+                ${
+                  mobileMenuOpen
+                    ? "-translate-y-[7px] -rotate-45"
+                    : ""
+                }
+              `}
+            />
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="mobile-dropdown">
-          <div className="container mobile-nav-links">
+        <div
+          className="
+            min-[901px]:hidden
+            bg-[#202328]
+            border-b border-[#30363D]
+            py-5
+          "
+        >
+          <div
+            className="
+              flex flex-col
+              gap-3
+              max-w-[1200px]
+              mx-auto
+              px-5
+            "
+          >
             {navLinks.map((link) => {
-              const isBlogLink = link.href === "/blogs";
-              const sectionId = link.href.includes('#') ? link.href.split('#')[1] : '';
-              const isActive = isBlogLink ? isBlogsPage : (isHomePage && activeSection === sectionId);
+              const isActive = getIsActive(link);
+
               return (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
-                  className={`mobile-nav-link ${isActive ? "mobile-nav-link-active" : ""}`}
                   onClick={() => setMobileMenuOpen(false)}
+                  className={`
+                    text-base
+                    px-4 py-[10px]
+                    rounded-lg
+                    no-underline
+                    transition-all duration-200
+                    ${
+                      isActive
+                        ? "bg-[#30363D] text-[#E8E9E7] border-l-[3px] border-[#A9433E]"
+                        : "text-[#a9b0ba] hover:bg-[#30363D] hover:text-[#E8E9E7]"
+                    }
+                  `}
                 >
                   {link.label}
-                </a>
+                </Link>
               );
             })}
-            <a
-              href={isHomePage ? "/download" : "/download"}
-              className="btn btn-primary mobile-btn-download"
+
+            {/* Mobile Download */}
+            <Link
+              href="/download"
               onClick={() => setMobileMenuOpen(false)}
+              className="
+                mt-[10px]
+                w-full
+                flex items-center justify-center
+                gap-2
+                bg-[#A9433E]
+                text-[#E8E9E7]
+                px-5 py-[10px]
+                rounded-lg
+                font-semibold
+                no-underline
+                transition-colors duration-200
+                hover:bg-[#953a37]
+              "
             >
               Download APK (48.2 MB)
-            </a>
+            </Link>
           </div>
         </div>
       )}
-
-      <style jsx>{`
-        .navbar-wrapper {
-          position: sticky;
-          top: 0;
-          left: 0;
-          width: 100%;
-          z-index: 100;
-          background: rgba(32, 35, 40, 0.88);
-          backdrop-filter: blur(14px);
-          -webkit-backdrop-filter: blur(14px);
-          border-bottom: 1px solid #30363D;
-        }
-
-        .nav-container {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          height: 72px;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-        }
-
-        .brand-logo {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          text-decoration: none;
-        }
-
-        .logo-symbol {
-          position: relative;
-          width: 40px;
-          height: 40px;
-          border-radius: 8px;
-          background: #30363D;
-          border: 1px solid #59616D;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: border-color 0.2s ease;
-        }
-
-        .brand-logo:hover .logo-symbol {
-          border-color: #A9433E;
-        }
-
-        .desktop-nav {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-        }
-
-        .nav-link {
-          font-size: 0.9rem;
-          font-weight: 500;
-          color: #a9b0ba;
-          padding: 8px 16px;
-          border-radius: 8px;
-          transition: all 0.2s ease;
-          text-decoration: none;
-        }
-
-        .nav-link:hover {
-          background: #30363D;
-          color: #E8E9E7;
-          border: 1px solid rgba(169, 67, 62, 0.3);
-        }
-
-        .nav-link-active {
-          color: #E8E9E7;
-          background: #30363D;
-          border: 1px solid rgba(169, 67, 62, 0.4);
-        }
-
-        .nav-actions {
-          display: flex;
-          align-items: center;
-          gap: 16px;
-        }
-
-        .btn-primary {
-          background: #A9433E;
-          color: #E8E9E7;
-          padding: 10px 20px;
-          border-radius: 8px;
-          font-weight: 600;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          text-decoration: none;
-          transition: background 0.2s ease;
-        }
-
-        .btn-primary:hover {
-          background: #953a37;
-        }
-
-        .btn-nav {
-          padding: 8px 18px;
-          font-size: 0.88rem;
-        }
-
-        .mobile-toggle {
-          display: none;
-          flex-direction: column;
-          gap: 5px;
-          padding: 6px;
-          background: transparent;
-          border: none;
-          cursor: pointer;
-        }
-
-        .bar {
-          width: 22px;
-          height: 2px;
-          background: #E8E9E7;
-          transition: all 0.2s ease;
-        }
-
-        .bar-open-1 {
-          transform: translateY(7px) rotate(45deg);
-        }
-
-        .bar-open-2 {
-          opacity: 0;
-        }
-
-        .bar-open-3 {
-          transform: translateY(-7px) rotate(-45deg);
-        }
-
-        .mobile-dropdown {
-          background: #202328;
-          border-bottom: 1px solid #30363D;
-          padding: 20px 0;
-        }
-
-        .mobile-nav-links {
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-        }
-
-        .mobile-nav-link {
-          font-size: 1rem;
-          color: #a9b0ba;
-          padding: 10px 16px;
-          border-radius: 8px;
-          text-decoration: none;
-          transition: all 0.2s ease;
-        }
-
-        .mobile-nav-link-active {
-          background: #30363D;
-          color: #E8E9E7;
-          border-left: 3px solid #A9433E;
-        }
-
-        .mobile-btn-download {
-          margin-top: 10px;
-          width: 100%;
-          justify-content: center;
-        }
-
-        @media (max-width: 900px) {
-          .desktop-nav {
-            display: none;
-          }
-          .mobile-toggle {
-            display: flex;
-          }
-          .btn-nav {
-            display: none;
-          }
-        }
-      `}</style>
     </header>
   );
 }

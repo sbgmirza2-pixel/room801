@@ -62,9 +62,13 @@ export default async function BlogDetailPage({ params }) {
   };
 
   return (
-    <>
+    <div className="min-h-screen bg-[#202328] text-[#E8E9E7] font-sans flex flex-col">
       <Navbar />
-      <main className="relative min-h-screen py-16 px-4 bg-[#1a1c23] overflow-hidden text-[#E8E9E7] font-sans">
+      
+      {/* Balanced explicit spacer to prevent navbar overlap */}
+      <div className="h-20 sm:h-24 w-full"></div>
+
+      <main className="grow relative py-16 px-4 bg-[#1a1c23] overflow-hidden text-[#E8E9E7] font-sans w-full">
         {/* Background Smoky Glows */}
         <div className="absolute inset-0 pointer-events-none z-0 blur-[80px] opacity-40">
           <div className="absolute w-[450px] h-[450px] rounded-full mix-blend-screen bg-[rgba(169,67,62,0.35)] top-[10%] left-[10%] animate-pulse"></div>
@@ -103,7 +107,8 @@ export default async function BlogDetailPage({ params }) {
           </article>
         </div>
       </main>
+
       <Room801Footer />
-    </>
+    </div>
   );
 }

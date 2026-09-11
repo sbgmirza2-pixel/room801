@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 import Room801Footer from '../components/Room801Footer';
 
 export default function DownloadClient() {
-  const [timeLeft, setTimeLeft] = useState(5);
+  const [timeLeft, setTimeLeft] = useState(10);
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
@@ -32,15 +32,18 @@ export default function DownloadClient() {
       {/* NAVBAR */}
       <Navbar />
 
+      {/* Spacer to prevent navbar overlap */}
+      <div className="h-20 sm:h-24 w-full"></div>
+
       {/* MAIN CONTENT */}
       <main className="relative py-16 px-2 sm:px-4 overflow-hidden grow">
         {/* Background Smoki Glows */}
         <div className="absolute inset-0 pointer-events-none z-0 blur-[80px] opacity-40">
-          <div className="absolute w-112.5 h-112.5 rounded-full mix-blend-screen bg-[rgba(169,67,62,0.35)] top-[10%] left-[10%] animate-pulse"></div>
-          <div className="absolute w-112.5 h-112.5 rounded-full mix-blend-screen bg-[rgba(75,85,99,0.35)] bottom-[10%] right-[10%] animate-pulse"></div>
+          <div className="absolute w-[450px] h-[450px] rounded-full mix-blend-screen bg-[rgba(169,67,62,0.35)] top-[10%] left-[10%] animate-pulse"></div>
+          <div className="absolute w-[450px] h-[450px] rounded-full mix-blend-screen bg-[rgba(75,85,99,0.35)] bottom-[10%] right-[10%] animate-pulse"></div>
         </div>
 
-        <div className="relative z-10 max-w-212.5 mx-auto pl-1 sm:pl-2">
+        <div className="relative z-10 max-w-[850px] mx-auto pl-1 sm:pl-2">
           {/* Header & Intro */}
           <div className="mb-8">
             <h1 className="text-3xl sm:text-4xl font-extrabold text-[#E8E9E7] font-display leading-tight mb-4">
@@ -56,7 +59,7 @@ export default function DownloadClient() {
 
           {/* UNIQUE INTERACTIVE TIMER / DOWNLOAD BOX */}
           <div className="bg-[rgba(37,40,48,0.7)] border border-[#A9433E]/40 hover:border-[#A9433E] transition-all duration-300 rounded-2xl p-6 sm:p-8 text-center my-8 shadow-xl relative overflow-hidden backdrop-blur-md">
-            <div className="absolute inset-0 bg-linear-to-r from-transparent via-[#A9433E]/10 to-transparent animate-pulse pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#A9433E]/10 to-transparent animate-pulse pointer-events-none"></div>
             
             <p className="text-sm sm:text-base text-[#a9b0ba] font-sans mb-6 font-medium">
               {!isReady ? "Please wait while our secure servers prepare your safe build package..." : "Your download package is fully optimized and ready!"}
@@ -64,12 +67,8 @@ export default function DownloadClient() {
 
             {!isReady ? (
               <div className="inline-flex flex-col items-center justify-center gap-3 bg-[rgba(169,67,62,0.1)] border border-[#A9433E]/60 px-8 py-5 rounded-xl text-[#E8E9E7]">
-                <div className="flex items-center gap-3">
-                  <span className="w-4 h-4 rounded-full border-2 border-[#A9433E] border-t-transparent animate-spin"></span>
-                  <span className="text-sm uppercase tracking-wider font-semibold text-[#A9433E]">Preparing Secure Link</span>
-                </div>
                 <div className="text-4xl font-black font-mono tracking-widest text-[#E8E9E7]">
-                  0:0{timeLeft}
+                  0:{String(timeLeft).padStart(2, '0')}
                 </div>
               </div>
             ) : (
@@ -77,7 +76,7 @@ export default function DownloadClient() {
                 onClick={handleDownload}
                 className="inline-flex items-center gap-2 bg-[#A9433E] hover:bg-[#bd4a44] text-white font-bold px-9 py-4 rounded-xl text-lg shadow-lg shadow-[#A9433E]/40 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
               >
-                📥 Download Room 801 APK (v2.3)
+                Download Room 801 APK (v2.3)
               </button>
             )}
           </div>

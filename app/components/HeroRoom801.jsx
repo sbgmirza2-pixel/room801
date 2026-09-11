@@ -35,7 +35,7 @@ export default function HeroRoom801() {
         <div className="flex flex-wrap items-center justify-start gap-3 mb-6">
           <a 
             href="/download" 
-            className="inline-flex items-center gap-2.5 bg-[#A9433E] hover:bg-[#bd4c47] text-white font-semibold text-sm  px-6 py-3.5 rounded-xl shadow-[0_4px_16px_rgba(169,67,62,0.35)] transition-all no-underline"
+            className="inline-flex items-center gap-2.5 bg-[#A9433E] hover:bg-[#bd4c47] text-white font-semibold text-sm px-6 py-3.5 rounded-xl shadow-[0_4px_16px_rgba(169,67,62,0.35)] transition-all no-underline"
           >
             <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
@@ -43,27 +43,49 @@ export default function HeroRoom801() {
             <span>Download APK (48.2 MB)</span>
           </a>
 
-          <button 
-            onClick={() => setShowShareModal(true)}
-            className="inline-flex items-center gap-2.5 bg-[#30363D] hover:bg-[#373e46] text-[#E8E9E7] font-semibold text-sm  px-6 py-3.5 rounded-xl border border-[#59616D]/40 hover:border-[#A9433E] transition-all cursor-pointer"
+          <a 
+            href="#installation"
+            className="inline-flex items-center gap-2.5 bg-[#30363D] hover:bg-[#373e46] text-[#E8E9E7] font-semibold text-sm px-6 py-3.5 rounded-xl border border-[#59616D]/40 hover:border-[#A9433E] transition-all no-underline"
           >
             <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
             </svg>
-            <span>Share Game</span>
-          </button>
+            <span>Installation Guide</span>
+          </a>
         </div>
 
-        {/* Ratings & Meta Info Card */}
-        <div className="bg-[#30363D] border border-[#59616D]/40 hover:border-[#A9433E] transition-all rounded-xl flex flex-wrap items-center justify-start gap-4 py-2.5 px-5 max-w-md w-full text-xs sm:text-sm shadow-md cursor-default">
+        {/* Ratings & Share Info Bar */}
+        <div className="bg-gradient-to-r from-[#21262d] via-[#282e38] to-[#21262d] border border-[#59616D]/50 hover:border-[#A9433E]/60 transition-all rounded-2xl flex items-center justify-between py-2 px-3.5 max-w-sm w-full shadow-lg">
+          
+          {/* Ratings Section */}
           <div className="flex items-center gap-2">
-            <span className="font-bold text-[#E8E9E7]">4.8 / 5.0</span>
-            <div className="flex text-amber-500">★★★★★</div>
+            <div className="px-2 py-1 rounded-lg bg-[#A9433E]/15 border border-[#A9433E]/30 text-[#A9433E] text-[11px] font-bold font-display uppercase tracking-wider">
+              Rating
+            </div>
+            <div>
+              <div className="flex items-center gap-1.5">
+                <span className="font-bold text-xs text-[#E8E9E7] tracking-wide">4.8</span>
+                <span className="text-[10px] text-[#a9b0ba] font-medium">/ 5.0</span>
+              </div>
+              <div className="flex text-amber-400 text-[10px] tracking-tight">★★★★★</div>
+            </div>
           </div>
-          <span className="hidden sm:inline-block w-1 h-1 rounded-full bg-[#59616D]"></span>
-          <span className="text-[#747d8a]">v1.0.2 Latest</span>
-          <span className="hidden sm:inline-block w-1 h-1 rounded-full bg-[#59616D]"></span>
-          <span className="text-[#747d8a]">Android 7.0+</span>
+
+          {/* Vertical Divider */}
+          <div className="w-[1px] h-6 bg-[#59616D]/40 mx-2"></div>
+          
+          {/* Enhanced Share Button */}
+          <button 
+            onClick={() => setShowShareModal(true)}
+            className="group inline-flex items-center gap-2 text-xs text-[#E8E9E7] hover:text-white transition-all bg-[#1a1d23] hover:bg-[#A9433E] px-4 py-2 rounded-xl border border-[#59616D]/40 hover:border-[#A9433E] cursor-pointer font-medium shadow-sm hover:shadow-[0_0_12px_rgba(169,67,62,0.4)]"
+          >
+            <span className="p-1 rounded-lg bg-[#30363D] group-hover:bg-white/20 transition-colors text-[#A9433E] group-hover:text-white">
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+              </svg>
+            </span>
+            <span>Share This Page</span>
+          </button>
         </div>
 
       </div>
@@ -142,7 +164,7 @@ export default function HeroRoom801() {
                 <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.534.26l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.195 1.006.131.832.941z"/></svg>
               </a>
 
-              {/* Reddit (Guaranteed Clean Text/Badge Icon style - 'r/') */}
+              {/* Reddit */}
               <a 
                 href={`https://www.reddit.com/submit?url=${encodeURIComponent(currentUrl)}&title=${encodeURIComponent(shareTitle)}`} 
                 target="_blank" 
@@ -163,7 +185,7 @@ export default function HeroRoom801() {
                 <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.331 1.363-.053.225-.172.271-.399.165-1.493-.695-2.427-2.875-2.427-4.629 0-3.767 2.738-7.229 7.892-7.229 4.144 0 7.365 2.953 7.365 6.899 0 4.117-2.595 7.431-6.199 7.431-1.209 0-2.345-.628-2.734-1.367l-.745 2.842c-.27 1.033-1.002 2.328-1.493 3.119 1.12.348 2.307.538 3.525.538 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
               </a>
 
-              {/* Tumblr (Guaranteed Bold Centered 't') */}
+              {/* Tumblr */}
               <a 
                 href={`https://www.tumblr.com/widgets/share/tool?postType=link&url=${encodeURIComponent(currentUrl)}&title=${encodeURIComponent(shareTitle)}`} 
                 target="_blank" 
@@ -174,7 +196,7 @@ export default function HeroRoom801() {
                 <span className="text-[9px] mt-1 font-sans uppercase tracking-wider">Tumblr</span>
               </a>
 
-              {/* Copy Link / Email */}
+              {/* Copy Link */}
               <button 
                 onClick={handleCopyLink}
                 className="h-20 bg-[#424852] hover:bg-[#4d5560] flex flex-col items-center justify-center rounded-lg transition-colors text-white cursor-pointer relative"

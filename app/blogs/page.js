@@ -10,10 +10,17 @@ export const metadata = {
 
 export default function BlogsPage() {
   return (
-    <>
+    <div className="min-h-screen bg-[#202328] text-[#E8E9E7] font-sans flex flex-col">
       <Navbar />
-      <BlogListClient blogs={blogsData} />
+      
+      {/* Balanced explicit spacer to prevent navbar overlap */}
+      <div className="h-20 sm:h-24 w-full"></div>
+
+      <main className="grow w-full pb-16">
+        <BlogListClient blogs={blogsData} />
+      </main>
+
       <Room801Footer />
-    </>
+    </div>
   );
 }
