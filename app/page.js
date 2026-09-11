@@ -23,8 +23,29 @@ import Room801TableOfContents from "./components/Room801TableOfContents";
 import Room801Screenshots from "./components/Room801Screenshots";
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Room 801 APK",
+    "operatingSystem": "ANDROID",
+    "applicationCategory": "GameApplication",
+    "softwareVersion": "2.3",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Download the latest Room 801 APK v2.3 for Android. Explore horror puzzle gameplay, eerie looping hallways, anomalies, guides, and safe installation steps."
+  };
+
   return (
     <div className="site-wrapper bg-darkBg min-h-screen">
+      {/* Schema Markup (Structured Data) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <Navbar />
       <main>
         <div id="home">

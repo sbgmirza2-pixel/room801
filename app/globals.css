@@ -29,6 +29,16 @@ html {
 }
 
 html,
+/* Base document */
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  scroll-padding-top: 90px;
+  background-color: #202328;
+  overflow-x: hidden; /* <-- overflow-x yahan shift kar diya */
+}
+
+html,
 body {
   margin: 0;
   padding: 0;
@@ -41,7 +51,8 @@ body {
   color: var(--text-primary);
   font-size: 16px;
   line-height: 1.65;
-  overflow-x: hidden;
+
+  
 
   background-image:
     radial-gradient(
@@ -57,7 +68,6 @@ body {
 
   background-attachment: fixed;
 
-  /* Better text rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;

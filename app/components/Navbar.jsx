@@ -20,12 +20,12 @@ export default function Navbar() {
       href: isHomePage ? "#home" : "/#home",
     },
     {
-      label: "FAQs",
-      href: isHomePage ? "#faqs" : "/#faqs",
-    },
-    {
       label: "Blogs",
       href: "/blogs",
+    },
+    {
+      label: "FAQs",
+      href: isHomePage ? "#faqs" : "/#faqs",
     },
   ];
 
@@ -79,14 +79,16 @@ export default function Navbar() {
   };
 
   return (
-    <header
-      className="
-        sticky top-0 left-0 w-full z-[100]
-        bg-[#202328]/90
-        backdrop-blur-[14px]
-        border-b border-[#30363D]
-      "
-    >
+ <header
+  className="
+    w-full
+    bg-[#202328]/90
+    backdrop-blur-[14px]
+    border-b border-[#30363D]
+  "
+>
+
+
       {/* Main Navbar */}
       <div
         className="
@@ -208,7 +210,7 @@ export default function Navbar() {
               bg-transparent
               border-0
               cursor-pointer
-          "
+            "
           >
             <span
               className={`

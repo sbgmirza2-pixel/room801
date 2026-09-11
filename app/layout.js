@@ -23,9 +23,34 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Room 801 APK",
+  title: "Room 801 APK - Game Info & Download",
   description:
     "Room 801 APK game information, guides, gameplay details, downloads, and useful tips.",
+  metadataBase: new URL("https://room801apk.com"),
+  openGraph: {
+    title: "Room 801 APK - Game Info & Download",
+    description:
+      "Room 801 APK game information, guides, gameplay details, downloads, and useful tips.",
+    url: "https://room801apk.com",
+    siteName: "Room 801 APK",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Room 801 APK Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Room 801 APK - Game Info & Download",
+    description:
+      "Room 801 APK game information, guides, gameplay details, downloads, and useful tips.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({ children }) {
