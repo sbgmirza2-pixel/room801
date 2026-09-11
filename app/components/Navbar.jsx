@@ -15,7 +15,7 @@ export default function Navbar() {
   const navLinks = [
     { label: "Home", href: isHomePage ? "#home" : "/#home" },
     { label: "Features", href: isHomePage ? "#features" : "/#features" },
-    { label: "FAQ", href: isHomePage ? "#faqs" : "/#faqs" },
+    { label: "FAQs", href: isHomePage ? "#faqs" : "/#faqs" },
     { label: "Blogs", href: "/blogs" },
   ];
 
