@@ -20,10 +20,6 @@ export default function Navbar() {
       href: isHomePage ? "#home" : "/#home",
     },
     {
-      label: "Features",
-      href: isHomePage ? "#features" : "/#features",
-    },
-    {
       label: "FAQs",
       href: isHomePage ? "#faqs" : "/#faqs",
     },
