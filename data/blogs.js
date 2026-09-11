@@ -38,7 +38,9 @@ The elevator itself can also show a strange change. Check its appearance before 
 Other reported changes include umbrellas, room numbers, a newspaper, a torn note, a flickering lamp, a black cat, a changed doorbell, and an unusual elevator. Some events can also involve changes in object size or character appearance. 
 
 **Final Tip**
-Do not rush through the hallway. Check doors, walls, objects, lights, sounds, and the elevator. When you find a strange change, return to Room 1. If nothing looks wrong, continue to the elevator. This simple rule is the main part of the Room 801 puzzle.`
+Do not rush through the hallway. Check doors, walls, objects, lights, sounds, and the elevator. When you find a strange change, return to Room 1. If nothing looks wrong, continue to the elevator. This simple rule is the main part of the Room 801 puzzle.
+
+After finding the anomalies, you can check our <a href="/blogs/room-801-endings" class="text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors no-underline">Room 801 Endings Guide</a> to learn about the ending route.`
   },
   {
     slug: "room-801-walkthrough",
@@ -55,6 +57,8 @@ Room 801 uses small visual changes as part of its main puzzle. Some changes are 
 **Check for Anomalies**
 Look for anything that does not match the previous hallway. A new object, changed poster, strange shadow, handprint, different room number, or unusual light can be a sign.
 Some anomalies also use sound. Footsteps and other strange sounds can help you notice that something is wrong.
+
+Want to know what strange changes can appear in the hallway? Check our <a href="/blogs/room-801-all-anomalies" class="text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors no-underline">Room 801 Anomalies</a> guide.
 
 **If You Find an Anomaly**
 If you notice a strange change, turn back and enter Room 1. This is the correct response to an anomaly.
@@ -107,7 +111,9 @@ The exact ending details can depend on the game version or release, so avoid ass
 Room 801 has an anomaly replay feature after clear progress, according to a Japanese gameplay guide. This gives you a chance to check the strange events again instead of finding them only during the main route. 
 
 **Final Tip**
-The best way to reach the ending is to follow the basic rule every time. Check the hallway first. Find an anomaly and return to Room 1. See no anomaly and go to the elevator. Keep this rule in mind and pay attention to small details.`
+The best way to reach the ending is to follow the basic rule every time. Check the hallway first. Find an anomaly and return to Room 1. See no anomaly and go to the elevator. Keep this rule in mind and pay attention to small details.
+
+If you are still new to the game, read our <a href="/blogs/room-801-gameplay" class="text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors no-underline">Room 801 Gameplay</a> guide to understand how the main gameplay works.`
   },
   {
     slug: "room-801-gameplay",
@@ -143,6 +149,8 @@ The best way to play Room 801 is to stay focused on small details. Do not move t
 If something changes, return to Room 1. If nothing changes, use the elevator. Keep following this rule as you progress through the game.
 
 **Final Gameplay Tip**
-Room 801 does not depend on fast action. Observation is the main part of the gameplay. Take your time, remember the hallway, and check small details before every decision. Once you understand the basic rule, the game becomes more clear and the strange events are easier to notice.`
+Room 801 does not depend on fast action. Observation is the main part of the gameplay. Take your time, remember the hallway, and check small details before every decision. Once you understand the basic rule, the game becomes more clear and the strange events are easier to notice.
+
+If you want to know what to do at each part of the game, check our <a href="/blogs/room-801-walkthrough" class="text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors no-underline">Room 801 Walkthrough</a>.`
   }
 ];

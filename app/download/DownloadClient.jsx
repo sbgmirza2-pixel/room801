@@ -33,7 +33,7 @@ export default function DownloadClient() {
       {/* NAVBAR */}
       <Navbar />
 
-   
+  
 
       {/* MAIN CONTENT */}
       <main className="relative py-16 px-2 sm:px-4 overflow-hidden grow">
@@ -50,7 +50,7 @@ export default function DownloadClient() {
               Download <span className="text-[#A9433E]">Room</span> 801 APK
             </h1>
             <p className="text-base sm:text-lg font-sans leading-relaxed">
-              <Link href="/" className="text-[#E8E9E7] hover:text-[#A9433E] font-semibold transition-colors no-underline">
+              <Link href="/" className="text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors no-underline">
                 Room 801
               </Link> is a horror puzzle game where you explore a strange hallway and look for unusual changes. You play as <strong>Hiyori Yasaka</strong>, who must follow a simple rule to reach the end. The game focuses on observation, mystery, and unexpected events.
             </p>
