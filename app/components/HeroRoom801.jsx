@@ -55,36 +55,33 @@ export default function HeroRoom801() {
         </div>
 
         {/* Ratings & Share Info Bar */}
-        <div className="bg-gradient-to-r from-[#21262d] via-[#282e38] to-[#21262d] border border-[#59616D]/50 hover:border-[#A9433E]/60 transition-all rounded-2xl flex items-center justify-between py-2 px-3.5 max-w-sm w-full shadow-lg">
+        <div className="bg-gradient-to-r from-[#21262d] via-[#282e38] to-[#21262d] border border-[#59616D]/50 hover:border-[#A9433E]/60 transition-all rounded-xl flex items-center justify-between py-1.5 px-3 max-w-[240px] w-full shadow-lg">
           
           {/* Ratings Section */}
-          <div className="flex items-center gap-2">
-            <div className="px-2 py-1 rounded-lg bg-[#A9433E]/15 border border-[#A9433E]/30 text-[#A9433E] text-[11px] font-bold font-display uppercase tracking-wider">
+          <div className="flex items-center gap-1.5">
+            <div className="px-1.5 py-0.5 rounded bg-[#A9433E]/15 border border-[#A9433E]/30 text-[#A9433E] text-[10px] font-bold font-display uppercase tracking-wider">
               Rating
             </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-bold text-xs text-[#E8E9E7] tracking-wide">4.8</span>
-                <span className="text-[10px] text-[#a9b0ba] font-medium">/ 5.0</span>
-              </div>
-              <div className="flex text-amber-400 text-[10px] tracking-tight">★★★★★</div>
+            <div className="flex items-center gap-1">
+              <span className="font-bold text-xs text-[#E8E9E7] tracking-wide">4.8</span>
+              <span className="text-[10px] text-[#a9b0ba] font-medium">/ 5.0</span>
             </div>
           </div>
 
           {/* Vertical Divider */}
-          <div className="w-[1px] h-6 bg-[#59616D]/40 mx-2"></div>
+          <div className="w-[1px] h-5 bg-[#59616D]/40 mx-1"></div>
           
           {/* Enhanced Share Button */}
           <button 
             onClick={() => setShowShareModal(true)}
-            className="group inline-flex items-center gap-2 text-xs text-[#E8E9E7] hover:text-white transition-all bg-[#1a1d23] hover:bg-[#A9433E] px-4 py-2 rounded-xl border border-[#59616D]/40 hover:border-[#A9433E] cursor-pointer font-medium shadow-sm hover:shadow-[0_0_12px_rgba(169,67,62,0.4)]"
+            className="group inline-flex items-center justify-center text-xs text-[#E8E9E7] hover:text-white transition-all bg-[#1a1d23] hover:bg-[#A9433E] p-1.5 rounded-lg border border-[#59616D]/40 hover:border-[#A9433E] cursor-pointer shadow-sm hover:shadow-[0_0_10px_rgba(169,67,62,0.4)]"
+            title="Share This Page"
           >
-            <span className="p-1 rounded-lg bg-[#30363D] group-hover:bg-white/20 transition-colors text-[#A9433E] group-hover:text-white">
+            <span className="p-1 rounded bg-[#30363D] group-hover:bg-white/20 transition-colors text-[#A9433E] group-hover:text-white flex items-center justify-center">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
               </svg>
             </span>
-            <span>Share This Page</span>
           </button>
         </div>
 

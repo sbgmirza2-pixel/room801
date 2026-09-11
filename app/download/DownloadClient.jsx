@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Room801Footer from '../components/Room801Footer';
 
@@ -32,8 +33,7 @@ export default function DownloadClient() {
       {/* NAVBAR */}
       <Navbar />
 
-      {/* Spacer to prevent navbar overlap */}
-      <div className="h-20 sm:h-24 w-full"></div>
+   
 
       {/* MAIN CONTENT */}
       <main className="relative py-16 px-2 sm:px-4 overflow-hidden grow">
@@ -49,11 +49,10 @@ export default function DownloadClient() {
             <h1 className="text-3xl sm:text-4xl font-extrabold text-[#E8E9E7] font-display leading-tight mb-4">
               Download <span className="text-[#A9433E]">Room</span> 801 APK
             </h1>
-            <p className="text-[#a9b0ba] text-base sm:text-lg font-sans leading-relaxed mb-4">
-              Download Room 801 APK for Android with simple download and install steps, game details, tips, and everything you need before starting the game.
-            </p>
             <p className="text-base sm:text-lg font-sans leading-relaxed">
-              <strong>Room 801</strong> is a horror puzzle game where you explore a strange hallway and look for unusual changes. You play as <strong>Hiyori Yasaka</strong>, who must follow a simple rule to reach the end. The game focuses on observation, mystery, and unexpected events.
+              <Link href="/" className="text-[#E8E9E7] hover:text-[#A9433E] font-semibold transition-colors no-underline">
+                Room 801
+              </Link> is a horror puzzle game where you explore a strange hallway and look for unusual changes. You play as <strong>Hiyori Yasaka</strong>, who must follow a simple rule to reach the end. The game focuses on observation, mystery, and unexpected events.
             </p>
           </div>
 
@@ -62,7 +61,7 @@ export default function DownloadClient() {
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#A9433E]/10 to-transparent animate-pulse pointer-events-none"></div>
             
             <p className="text-sm sm:text-base text-[#a9b0ba] font-sans mb-6 font-medium">
-              {!isReady ? "Please wait while our secure servers prepare your safe build package..." : "Your download package is fully optimized and ready!"}
+              {!isReady ? "Just wait a few seconds for the timer, then tap the download button below." : "Your download package is fully optimized and ready!"}
             </p>
 
             {!isReady ? (
