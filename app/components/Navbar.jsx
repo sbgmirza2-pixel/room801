@@ -10,11 +10,13 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const pathname = usePathname();
   const isHomePage = pathname === "/";
+  const isBlogsPage = pathname.startsWith("/blogs");
 
   const navLinks = [
     { label: "Home", href: isHomePage ? "#home" : "/#home" },
     { label: "Features", href: isHomePage ? "#features" : "/#features" },
     { label: "FAQ", href: isHomePage ? "#faqs" : "/#faqs" },
+    { label: "Blogs", href: "/blogs" },
   ];
 
   useEffect(() => {
@@ -64,8 +66,9 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav className="desktop-nav">
           {navLinks.map((link) => {
+            const isBlogLink = link.href === "/blogs";
             const sectionId = link.href.includes('#') ? link.href.split('#')[1] : '';
-            const isActive = isHomePage && activeSection === sectionId;
+            const isActive = isBlogLink ? isBlogsPage : (isHomePage && activeSection === sectionId);
             return (
               <a
                 key={link.label}
@@ -107,8 +110,9 @@ export default function Navbar() {
         <div className="mobile-dropdown">
           <div className="container mobile-nav-links">
             {navLinks.map((link) => {
+              const isBlogLink = link.href === "/blogs";
               const sectionId = link.href.includes('#') ? link.href.split('#')[1] : '';
-              const isActive = isHomePage && activeSection === sectionId;
+              const isActive = isBlogLink ? isBlogsPage : (isHomePage && activeSection === sectionId);
               return (
                 <a
                   key={link.label}

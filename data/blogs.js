@@ -89,6 +89,7 @@ If something looks different, go back to Room 1. If the hallway looks normal, us
 
 **Watch for Strange Changes**
 The game has many possible anomalies. Gameplay videos show examples such as a running ghost, footsteps, a wrong poster, a hanging figure, a black box, a sealed door, handprints, a changed elevator, room number changes, a newspaper change, and a flickering lamp. 
+Some changes are large and easy to see. Others are small. A quick look may not be enough, so compare the hallway with what you saw before.
 
 **Return to Room 1**
 When you find an anomaly, return to Room 1 instead of going to the elevator. This is one of the main rules given to the player.
@@ -100,6 +101,7 @@ The elevator can also have its own strange event, so check it before you move ah
 
 **Reach the Final Floor**
 The available walkthrough information states that the player continues down to the first floor. After reaching that floor, the guide says to move toward the right side to reach the ending. 
+The exact ending details can depend on the game version or release, so avoid assuming that every third-party Android copy has the same story result.
 
 **After the Ending**
 Room 801 has an anomaly replay feature after clear progress, according to a Japanese gameplay guide. This gives you a chance to check the strange events again instead of finding them only during the main route. 
@@ -122,6 +124,7 @@ Some changes are easy to notice, while others are very small. A different poster
 **Find the Anomalies**
 Anomalies are the main challenge in Room 801. They can appear as changes in objects, characters, sounds, or parts of the hallway.
 Some reported examples include a running ghost, footsteps, handprints, a black box, a changed poster, a sealed door, a different newspaper, a flickering light, and changes around the elevator.
+You do not need to find every strange thing at once. Focus on the current hallway and check the places that have changed.
 
 **Return to Room 1**
 When you notice an anomaly, the correct move is to return to Room 1. This is one of the main rules of the game.
@@ -134,6 +137,10 @@ Still, do not rush. The elevator area can also contain changes, so check it befo
 **Pay Attention to Sound**
 Room 801 is not only about looking at the screen. Sound can also help you notice something unusual. Footsteps and other strange sounds can be part of the hallway events.
 Playing with sound on can help you notice these details. Keep the volume at a comfortable level and listen when the hallway seems different.
+
+**Keep Your Focus**
+The best way to play Room 801 is to stay focused on small details. Do not move through the hallway too quickly. Check the same areas each time so you can remember their normal appearance.
+If something changes, return to Room 1. If nothing changes, use the elevator. Keep following this rule as you progress through the game.
 
 **Final Gameplay Tip**
 Room 801 does not depend on fast action. Observation is the main part of the gameplay. Take your time, remember the hallway, and check small details before every decision. Once you understand the basic rule, the game becomes more clear and the strange events are easier to notice.`
