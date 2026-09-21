@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import Room801Footer from '../components/Room801Footer';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'About Us - Room 801 APK',
@@ -29,9 +30,14 @@ export default function AboutUsPage() {
         <div className="space-y-6 text-[#a9b0ba] text-base leading-relaxed">
           <p>
             Welcome to{' '}
-            <strong className="text-[#E8E9E7]">Room801apk.com</strong>. Our
-            website is focused on Room 801 and its related game information.
-            We share simple guides, gameplay details, download information, and
+            <Link 
+              href="/" 
+              className="text-[#A9433E] font-semibold hover:underline"
+            >
+              room801.com
+            </Link>
+            . Our website is focused on Room 801 and its related game information. 
+            We share simple guides, gameplay details, download information, and 
             useful tips for players.
           </p>
 

@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import Room801Footer from '../components/Room801Footer';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Terms & Conditions - Room 801 APK',
@@ -28,15 +29,26 @@ export default function TermsAndConditionsPage() {
         <div className="space-y-6 text-[#a9b0ba] text-base leading-relaxed">
           <p>
             By using{' '}
-            <strong className="text-[#E8E9E7]">Room801apk.com</strong>, you
-            agree to follow these Terms and Conditions. Our website provides
+            <Link 
+              href="/" 
+              className="text-[#A9433E] font-semibold hover:underline"
+            >
+              room801.com
+            </Link>
+            , you agree to follow these Terms and Conditions. Our website provides
             information about Room 801, including game guides, gameplay
             details, download information, and related content.
           </p>
 
           <p>
-            You should use the information on this website responsibly.
-            Room801apk.com is not responsible for problems that may result from
+            You should use the information on this website responsibly.{' '}
+            <Link 
+              href="/" 
+              className="text-[#A9433E] font-semibold hover:underline"
+            >
+              room801.com
+            </Link>{' '}
+            is not responsible for problems that may result from
             the use of third-party files, links, or services.
           </p>
 

@@ -34,6 +34,10 @@ export default function Room801Screenshots() {
                     alt={item.alt}
                     width={600}
                     height={380}
+                    // Pehli image ko priority di hai taake woh foran load ho
+                    priority={index === 0}
+                    // Lazy loading baqi images ke liye active rakhi hai
+                    loading={index === 0 ? "eager" : "lazy"}
                     className="screenshot-img"
                   />
                   {/* Shiny Glaze Layer */}
@@ -171,13 +175,15 @@ export default function Room801Screenshots() {
           width: 100%;
           height: 320px;
           overflow: hidden;
+          /* Loading ke doran placeholder background */
+          background-color: #252830; 
         }
 
         .screenshot-img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          transition: transform 0.5s ease;
+          transition: transform 0.5s ease, opacity 0.3s ease;
         }
 
         .screenshot-card:hover .screenshot-img {

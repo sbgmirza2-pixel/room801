@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import Room801Footer from '../components/Room801Footer';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Contact Us - Room 801 APK',
@@ -28,8 +29,13 @@ export default function ContactUsPage() {
         <div className="space-y-6 text-[#a9b0ba] text-base leading-relaxed">
           <p>
             If you have any questions about{' '}
-            <strong className="text-[#E8E9E7]">Room801apk.com</strong>, feel
-            free to contact us. You can also reach out if you notice an
+            <Link 
+              href="/" 
+              className="text-[#A9433E] font-semibold hover:underline"
+            >
+              room801.com
+            </Link>
+            , feel free to contact us. You can also reach out if you notice an
             incorrect detail, have a suggestion, or want to report an issue
             with any page.
           </p>

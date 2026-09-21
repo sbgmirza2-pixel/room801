@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import Room801Footer from '../components/Room801Footer';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'DMCA Notice & Policy - Room 801 APK',
@@ -27,7 +28,13 @@ export default function DmcaPage() {
 
         <div className="space-y-6 text-[#a9b0ba] text-base leading-relaxed">
           <p>
-            <strong className="text-[#E8E9E7]">Room801apk.com</strong> respects
+            <Link 
+              href="/" 
+              className="text-[#A9433E] font-semibold hover:underline"
+            >
+              room801.com
+            </Link>
+             respects
             the rights of copyright owners. If you believe that any content
             published on our website violates your copyright, you can contact
             us with the relevant details.

@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import Room801Footer from '../components/Room801Footer';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Disclaimer - Room 801 APK',
@@ -28,14 +29,25 @@ export default function DisclaimerPage() {
         <div className="space-y-6 text-[#a9b0ba] text-base leading-relaxed">
           <p>
             The information available on{' '}
-            <strong className="text-[#E8E9E7]">Room801apk.com</strong> is
-            provided for general informational purposes. We publish guides,
+            <Link 
+              href="/" 
+              className="text-[#A9433E] font-semibold hover:underline"
+            >
+              room801.com
+            </Link>
+             is provided for general informational purposes. We publish guides,
             game information, download details, and other content related to
             Room 801.
           </p>
 
           <p>
-            Room801apk.com is an independent website and is not the official
+            <Link 
+              href="/" 
+              className="text-[#A9433E] font-semibold hover:underline"
+            >
+              room801.com
+            </Link>
+             is an independent website and is not the official
             website of the Room 801 game or its developer unless clearly
             stated on a specific page.
           </p>
