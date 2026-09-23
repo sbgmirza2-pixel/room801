@@ -34,9 +34,9 @@ export default function AboutUsPage() {
               href="/" 
               className="text-[#A9433E] font-semibold hover:underline"
             >
-              room801.com
+              room801apk.com
             </Link>
-            . Our website is focused on Room 801 and its related game information. 
+            {' '}Our website is focused on Room 801 and its related game information. 
             We share simple guides, gameplay details, download information, and 
             useful tips for players.
           </p>

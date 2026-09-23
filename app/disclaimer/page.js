@@ -33,9 +33,9 @@ export default function DisclaimerPage() {
               href="/" 
               className="text-[#A9433E] font-semibold hover:underline"
             >
-              room801apk
+              room801apk.com
             </Link>
-             is provided for general informational purposes. We publish guides,
+              {' '}is provided for general informational purposes. We publish guides,
             game information, download details, and other content related to
             Room 801.
           </p>
@@ -45,9 +45,9 @@ export default function DisclaimerPage() {
               href="/" 
               className="text-[#A9433E] font-semibold hover:underline"
             >
-              room801.com
+              room801apk.com
             </Link>
-             is an independent website and is not the official
+              {' '}is an independent website and is not the official
             website of the Room 801 game or its developer unless clearly
             stated on a specific page.
           </p>

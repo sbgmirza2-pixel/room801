@@ -33,9 +33,9 @@ export default function ContactUsPage() {
               href="/" 
               className="text-[#A9433E] font-semibold hover:underline"
             >
-              room801apk
+              room801apk.com
             </Link>
-            , feel free to contact us. You can also reach out if you notice an
+           {' '} , feel free to contact us. You can also reach out if you notice an
             incorrect detail, have a suggestion, or want to report an issue
             with any page.
           </p>

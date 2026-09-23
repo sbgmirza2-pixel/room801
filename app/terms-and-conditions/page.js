@@ -33,7 +33,7 @@ export default function TermsAndConditionsPage() {
               href="/" 
               className="text-[#A9433E] font-semibold hover:underline"
             >
-              room801.com
+              room801apk.com{' '}
             </Link>
             , you agree to follow these Terms and Conditions. Our website provides
             information about Room 801, including game guides, gameplay
@@ -43,10 +43,10 @@ export default function TermsAndConditionsPage() {
           <p>
             You should use the information on this website responsibly.{' '}
             <Link 
-              href="/" 
+              href="#" 
               className="text-[#A9433E] font-semibold hover:underline"
             >
-              room801apk
+              room801
             </Link>{' '}
             is not responsible for problems that may result from
             the use of third-party files, links, or services.
