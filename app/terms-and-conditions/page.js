@@ -46,7 +46,7 @@ export default function TermsAndConditionsPage() {
               href="/" 
               className="text-[#A9433E] font-semibold hover:underline"
             >
-              room801.com
+              room801apk
             </Link>{' '}
             is not responsible for problems that may result from
             the use of third-party files, links, or services.

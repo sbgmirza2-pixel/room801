@@ -32,7 +32,7 @@ export default function DmcaPage() {
               href="/" 
               className="text-[#A9433E] font-semibold hover:underline"
             >
-              room801.com
+              room801apk
             </Link>
              respects
             the rights of copyright owners. If you believe that any content

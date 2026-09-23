@@ -33,7 +33,7 @@ export default function DisclaimerPage() {
               href="/" 
               className="text-[#A9433E] font-semibold hover:underline"
             >
-              room801.com
+              room801apk
             </Link>
              is provided for general informational purposes. We publish guides,
             game information, download details, and other content related to
