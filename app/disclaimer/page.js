@@ -30,10 +30,10 @@ export default function DisclaimerPage() {
           <p>
             The information available on{' '}
             <Link 
-              href="/" 
-              className="text-[#A9433E] font-semibold hover:underline"
+              href="#" 
+              className="font-semibold "
             >
-              room801apk.com
+              room 801
             </Link>
               {' '}is provided for general informational purposes. We publish guides,
             game information, download details, and other content related to

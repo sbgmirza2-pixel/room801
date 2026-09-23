@@ -44,9 +44,9 @@ export default function TermsAndConditionsPage() {
             You should use the information on this website responsibly.{' '}
             <Link 
               href="#" 
-              className="text-[#A9433E] font-semibold hover:underline"
+              
             >
-              room801
+              room 801
             </Link>{' '}
             is not responsible for problems that may result from
             the use of third-party files, links, or services.
