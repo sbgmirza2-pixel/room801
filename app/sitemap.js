@@ -1,5 +1,5 @@
 export default async function sitemap() {
-  const baseUrl = 'https://room801apk.com'; // Apna domain yahan likhein
+  const baseUrl = 'https://room801apk.com'; 
 
   return [
     {

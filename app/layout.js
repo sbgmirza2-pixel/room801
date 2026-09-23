@@ -23,22 +23,30 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Room 801 APK - Game Info & Download",
+  title: "Download Room 801 APK for Android - Latest Version 2.3",
   description:
-    "Room 801 APK game information, guides, gameplay details, downloads, and useful tips.",
+    "Download Room 801 APK for Android and explore its looping hallway, strange anomalies, atmospheric sounds, simple controls, and suspenseful gameplay.",
+  keywords: [
+    "Room 801 APK",
+    "Room 801 Game",
+    "Horror Android Game",
+    "Room 801 Version 2.3",
+    "Anomaly Detection Game",
+    "Download Room 801"
+  ],
   metadataBase: new URL("https://room801apk.com"),
   openGraph: {
-    title: "Room 801 APK - Game Info & Download",
+    title: "Download Room 801 APK for Android - Latest Version 2.3",
     description:
-      "Room 801 APK game information, guides, gameplay details, downloads, and useful tips.",
+      "Explore the looping hallway, strange anomalies, and atmospheric sounds in Room 801 APK.",
     url: "https://room801apk.com",
     siteName: "Room 801 APK",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/room-801-apk-logo(1).webp",
         width: 1200,
         height: 630,
-        alt: "Room 801 APK Preview",
+        alt: "Room 801 APK Gameplay Preview",
       },
     ],
     locale: "en_US",
@@ -46,10 +54,13 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Room 801 APK - Game Info & Download",
+    title: "Download Room 801 APK for Android - Latest Version 2.3",
     description:
-      "Room 801 APK game information, guides, gameplay details, downloads, and useful tips.",
-    images: ["/og-image.jpg"],
+      "Explore the looping hallway, strange anomalies, and atmospheric sounds in Room 801 APK.",
+    images: ["/room-801-apk-logo(1).webp"],
+  },
+  alternates: {
+    canonical: "https://room801apk.com",
   },
 };
 
