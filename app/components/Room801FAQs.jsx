@@ -36,7 +36,7 @@ export default function Room801FAQs() {
           Frequently Asked <span className="text-[#A9433E]">Questions</span>
         </h2>
 
-        {/* FAQs Accordion List */}
+        {/* FAQs */}
         <div className="w-full max-w-3xl space-y-3 font-sans">
           {faqs.map((item, index) => {
             const isOpen = openIndex === index;
