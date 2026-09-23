@@ -89,7 +89,7 @@ export default function Navbar() {
 >
 
 
-      {/* Main Navbar */}
+      {/*  Navbar */}
       <div
         className="
           flex items-center justify-between
