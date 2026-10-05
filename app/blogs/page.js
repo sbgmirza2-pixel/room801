@@ -6,6 +6,9 @@ import Room801Footer from '../components/Room801Footer';
 export const metadata = {
   title: "Room 801 Guides & Blog - Master All Anomalies",
   description: "Explore official Room 801 guides, walkthroughs, anomalies list, and ending explanations.",
+  alternates: {
+    canonical: `${SITE_URL}/blogs`,
+  },
 };
 
 export default function BlogsPage() {
