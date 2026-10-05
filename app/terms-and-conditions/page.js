@@ -1,10 +1,13 @@
 import Navbar from '../components/Navbar';
 import Room801Footer from '../components/Room801Footer';
 import Link from 'next/link';
-
+const SITE_URL = 'https://room801apk.com';
 export const metadata = {
   title: 'Terms & Conditions - Room 801 APK',
   description: 'Read the Terms and Conditions for important rules about website use, content, downloads, user responsibilities, and the information provided.',
+ alternates: {
+    canonical: `${SITE_URL}/terms-and-conditions`,
+  },
 };
 
 export default function TermsAndConditionsPage() {

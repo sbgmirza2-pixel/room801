@@ -1,10 +1,14 @@
 import Navbar from '../components/Navbar';
 import Room801Footer from '../components/Room801Footer';
 import Link from 'next/link';
+const SITE_URL = 'https://room801apk.com';
 
 export const metadata = {
   title: 'DMCA Notice & Policy - Room 801 APK',
   description: 'Learn how to report copyright concerns, request content removal, or submit a DMCA notice for Room 801 related content.',
+ alternates: {
+    canonical: `${SITE_URL}/dmca`,
+  },
 };
 
 export default function DmcaPage() {

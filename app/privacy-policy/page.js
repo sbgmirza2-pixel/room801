@@ -1,10 +1,14 @@
 import Navbar from '../components/Navbar';
 import Room801Footer from '../components/Room801Footer';
 import Link from 'next/link';
+const SITE_URL = 'https://room801apk.com';
 
 export const metadata = {
   title: 'Privacy Policy - Room 801 APK',
   description: 'Read the Privacy Policy to learn how visitor information, cookies, and website data are collected, used, and handled.',
+ alternates: {
+    canonical: `${SITE_URL}/privacy-policy`,
+  },
 };
 
 export default function PrivacyPolicyPage() {

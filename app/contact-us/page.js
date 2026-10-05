@@ -1,10 +1,14 @@
 import Navbar from '../components/Navbar';
 import Room801Footer from '../components/Room801Footer';
 import Link from 'next/link';
+const SITE_URL = 'https://room801apk.com';
 
 export const metadata = {
   title: 'Contact Us - Room 801 APK',
   description: 'Contact us for questions, suggestions, corrections, feedback, or any other website-related matters. We are happy to hear from you.',
+ alternates: {
+    canonical: `${SITE_URL}/contact-us`,
+  },
 };
 
 export default function ContactUsPage() {
