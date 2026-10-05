@@ -17,7 +17,7 @@ export default function Navbar() {
   const navLinks = [
     {
       label: "Home",
-      href: isHomePage ? "#home" : "/#home",
+      href: "/",
     },
     {
       label: "Blogs",
@@ -25,7 +25,7 @@ export default function Navbar() {
     },
     {
       label: "FAQs",
-      href: isHomePage ? "#faqs" : "/#faqs",
+      href: "/faqs",
     },
   ];
 
