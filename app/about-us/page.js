@@ -6,6 +6,9 @@ export const metadata = {
   title: 'About Us - Room 801 APK',
   description:
     'Learn about Room801, our purpose, the type of game information we provide, and how we help users understand Room 801.',
+    alternates: {
+    canonical: `${SITE_URL}/about-us`,
+}
 };
 
 export default function AboutUsPage() {
