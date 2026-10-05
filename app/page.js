@@ -1,3 +1,4 @@
+const SITE_URL = 'https://room801apk.com';
 export const metadata = {
   title: "Room 801 APK v2.3 – Download Latest Version for Android",
   description: "Download Room 801 APK for Android and explore its looping hallway, strange anomalies, atmospheric sounds, simple controls, and suspenseful gameplay.",
