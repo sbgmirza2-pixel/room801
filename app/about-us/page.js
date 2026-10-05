@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar';
 import Room801Footer from '../components/Room801Footer';
 import Link from 'next/link';
+const SITE_URL = 'https://room801apk.com';
 
 
 export const metadata = {
