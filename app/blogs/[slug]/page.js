@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Room801Footer from '../../components/Room801Footer';
 
+const SITE_URL = 'https://room801apk.com';
+
 export async function generateStaticParams() {
   return blogsData.map((blog) => ({
     slug: blog.slug,
@@ -21,6 +23,9 @@ export async function generateMetadata({ params }) {
   return {
     title: `${blog.title} | Room 801`,
     description: blog.metaDescription,
+    alternates: {
+      canonical: `${SITE_URL}/blogs/${slug}`,
+    },
   };
 }
 
