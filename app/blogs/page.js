@@ -2,6 +2,7 @@ import { blogsData } from '@/data/blogs';
 import BlogListClient from './BlogListClient';
 import Navbar from '../components/Navbar';
 import Room801Footer from '../components/Room801Footer';
+
 const SITE_URL = 'https://room801apk.com';
 
 export const metadata = {
