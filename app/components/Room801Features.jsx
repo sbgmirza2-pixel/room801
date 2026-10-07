@@ -9,7 +9,7 @@ export default function Room801Features() {
     {
       title: "Loop-Based Structure",
       category: "Gameplay Mechanics",
-      description: "Room 801 is a repeating loop. This loop makes the game more interesting. Players walk down the hall and see everything near them. When players reach at the end, they need to go back and check the area again."
+      description: 'Room 801 is a repeating loop. This loop makes the game more interesting. Players walk down the hall and see everything near them. When players reach at the end, they need to go back and check the area again.You can also check out <a href="https://train45apk.com" class=" text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors no-underline" target="_blank" rel="noopener noreferrer">Train 45</a> for another Android game.'
     },
     {
       title: "Anomaly Detection",
@@ -94,7 +94,7 @@ export default function Room801Features() {
     : features.filter(item => item.category === activeTab);
 
   return (
-    <section id="features"className="w-full py-6 md:py-8 relative z-10">
+    <section id="features" className="w-full py-6 md:py-8 relative z-10">
       <div className="site-container flex flex-col items-start text-left w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
@@ -144,9 +144,17 @@ export default function Room801Features() {
                     #{index + 1}
                   </span>
                 </div>
-                <p className="text-sm sm:text-base text-[#a9b0ba] leading-relaxed">
-                  {item.description}
-                </p>
+                {/* Agar pehla item hai toh dangerouslySetInnerHTML use hoga taake link render ho, warna normal text */}
+                {index === 0 && activeTab === 'All' ? (
+                  <div 
+                    className="text-sm sm:text-base text-[#a9b0ba] leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: item.description }}
+                  />
+                ) : (
+                  <p className="text-sm sm:text-base text-[#a9b0ba] leading-relaxed">
+                    {item.description}
+                  </p>
+                )}
               </div>
             </div>
           ))}
