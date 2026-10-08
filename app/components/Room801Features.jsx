@@ -9,7 +9,7 @@ export default function Room801Features() {
     {
       title: "Loop-Based Structure",
       category: "Gameplay Mechanics",
-      description: 'Room 801 is a repeating loop. This loop makes the game more interesting. Players walk down the hall and see everything near them. When players reach at the end, they need to go back and check the area again.You can also check out <a href="https://train45apk.com" class=" text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors no-underline" target="_blank" rel="noopener noreferrer">Train 45</a> for another Android game.'
+      description: 'Room 801 is a repeating loop. This loop makes the game more interesting. Players walk down the hall and see everything near them. When players reach at the end, they need to go back and check the area again. You can also check out <a href="https://train45apk.com" class=" text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors no-underline" target="_blank" rel="noopener noreferrer">Train 45</a> for another Android game.'
     },
     {
       title: "Anomaly Detection",

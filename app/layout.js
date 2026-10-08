@@ -64,6 +64,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${jakarta.variable} ${spaceGrotesk.variable} ${jetBrainsMono.variable}`}
     >
+    <script data-cfasync="false" async type="text/javascript" src="//aj.ariososhands.com/rkUDkiVA0rP7/156381"></script>
       <body>
         {/* Google Analytics Scripts */}
         <Script
@@ -84,6 +85,7 @@ export default function RootLayout({ children }) {
         />
 
         {children}
+
       </body>
     </html>
   );
