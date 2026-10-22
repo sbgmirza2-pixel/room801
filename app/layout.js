@@ -65,6 +65,8 @@ export default function RootLayout({ children }) {
       className={`${jakarta.variable} ${spaceGrotesk.variable} ${jetBrainsMono.variable}`}
     >
       <head>
+      {/* Google AdSense Verification Meta Tag */}
+        <meta name="google-adsense-account" content="ca-pub-5227632355414460" />
         {/* Google AdSense Script */}
         <Script
           async
