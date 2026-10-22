@@ -52,9 +52,9 @@ export default function Home() {
 
       <Navbar />
       <main>
-        <div id="home">
+        
           <HeroRoom801 />
-        </div>
+      
         <hr className="w-full border-t border-[#59616D]/30 mb-6" />
 
         <WhatIsRoom801Page />

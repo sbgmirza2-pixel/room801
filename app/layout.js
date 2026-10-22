@@ -64,7 +64,18 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${jakarta.variable} ${spaceGrotesk.variable} ${jetBrainsMono.variable}`}
     >
-    <script data-cfasync="false" async type="text/javascript" src="//aj.ariososhands.com/rkUDkiVA0rP7/156381"></script>
+      <head>
+        {/* Google AdSense Script */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5227632355414460"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+        
+        {/* Other Head Script (if required) */}
+        <script data-cfasync="false" async type="text/javascript" src="//aj.ariososhands.com/rkUDkiVA0rP7/156381"></script>
+      </head>
       <body>
         {/* Google Analytics Scripts */}
         <Script
