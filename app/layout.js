@@ -27,7 +27,9 @@ export const metadata = {
   title: "Download Room 801 APK for Android - Latest Version 2.3",
   description:
     "Download Room 801 APK for Android and explore its looping hallway, strange anomalies, atmospheric sounds, simple controls, and suspenseful gameplay.",
-  
+  verification: {
+  google: "6iR0n-5o6r3WRj2a1YnE27VXL3-HkqYIrCgzt8UGAfw",
+},
   metadataBase: new URL("https://room801apk.com"),
   openGraph: {
     title: "Download Room 801 APK for Android - Latest Version 2.3",
@@ -65,8 +67,7 @@ export default function RootLayout({ children }) {
       className={`${jakarta.variable} ${spaceGrotesk.variable} ${jetBrainsMono.variable}`}
     >
       <head>
-        {/* Google Search Console Verification Meta Tag */}
-        <meta name="google-site-verification" content="6iR0n-5o6r3WRj2a1YnE27VXL3-HkqYIrCgzt8UGAfw" />
+      
 
       {/* Google AdSense Verification Meta Tag */}
         <meta name="google-adsense-account" content="ca-pub-5227632355414460" />
