@@ -14,16 +14,7 @@ export default function WhatIsRoom801() {
             Room 801 is a horror puzzle adventure game for Android. In the game, the player tries to find the object and escape from the mysterious place. You play as Hiyori Yasaka, a worker who must know how to get out of her dorm floor. There are no moments or loud noises, just small strange things.
           </p>
           <p>
-            The sounds and the horror things happen will make you feel uncomfortable. You have to find all the strange things and get back to Room 801 before something happens. Room 801 has endings and unexpected strange things, so every time you play it will be a different experience. You can also check out {' '}
-            <a 
-              href="https://cocoflixapp.org/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-[#A9433E] hover:underline font-medium"
-            >
-              CoCoFlix
-            </a>{' '}for more entertainment.
-          </p>
+            The sounds and the horror things happen will make you feel uncomfortable. You have to find all the strange things and get back to Room 801 before something happens. Room 801 has endings and unexpected strange things, so every time you play it will be a different experience. <p/>
         </div>
 
       </div>
