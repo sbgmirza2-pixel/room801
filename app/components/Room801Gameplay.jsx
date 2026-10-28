@@ -2,24 +2,37 @@ export default function Room801Gameplay() {
   const steps = [
     {
       title: "Explore the Environment",
-      description: "Players walk through the eighth-floor hallway. Observe the area. Doors, lights, signs, objects, and sounds can provide details. Moving slowly, it is easier for players to notice anything that looks different."
+      description: (
+        <>
+          Players walk through the eighth-floor hallway. Observe the area. Doors, lights, signs, objects, and sounds can provide details. Moving slowly, it is easier for players to notice anything that looks different.{" "}
+          <a
+            href="https://deltaexecuter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#A9433E] hover:underline font-semibold"
+          >
+            Delta Executor
+          </a>{" "}
+          is a powerful tool for Roblox players, offering useful features and a smooth gaming experience.
+        </>
+      ),
     },
     {
       title: "Find Hidden Clues",
-      description: "Small details help players to see what has changed. Some clues can appear on objects, room numbers, posters, lights, or other parts of the hallway. Players should remember the environment before choosing."
+      description: "Small details help players to see what has changed. Some clues can appear on objects, room numbers, posters, lights, or other parts of the hallway. Players should remember the environment before choosing.",
     },
     {
       title: "Detect Unusual Changes",
-      description: "Anomalies are the main part of this gameplay. They can show as objects, strange sounds, odd figures, missing items, or different visuals. Some of these changes are easy to notice, but others need careful attention."
+      description: "Anomalies are the main part of this gameplay. They can show as objects, strange sounds, odd figures, missing items, or different visuals. Some of these changes are easy to notice, but others need careful attention.",
     },
     {
       title: "Solve Puzzles and Progress",
-      description: "The main challenge is to figure out if the hallway is normal or contains an anomaly. If something unusual appears, the player should return to Room 801. If everything looks normal, the player can continue."
-    }
+      description: "The main challenge is to figure out if the hallway is normal or contains an anomaly. If something unusual appears, the player should return to Room 801. If everything looks normal, the player can continue.",
+    },
   ];
 
   return (
-    <section id="gameplay"className="w-full py-6 md:py-8 relative z-10">
+    <section id="gameplay" className="w-full py-6 md:py-8 relative z-10">
       <div className="site-container flex flex-col items-start text-left w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Heading with Red Accent */}
@@ -48,9 +61,9 @@ export default function Room801Gameplay() {
                 </h3>
               </div>
               {/* Normal text size applied here */}
-              <p className="text-sm sm:text-base text-[#a9b0ba] leading-relaxed pl-7">
+              <div className="text-sm sm:text-base text-[#a9b0ba] leading-relaxed pl-7">
                 {step.description}
-              </p>
+              </div>
             </div>
           ))}
         </div>
