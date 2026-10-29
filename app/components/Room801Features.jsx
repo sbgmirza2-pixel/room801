@@ -9,32 +9,32 @@ export default function Room801Features() {
     {
       title: "Loop-Based Structure",
       category: "Gameplay Mechanics",
-      description: 'Room 801 is a repeating loop. This loop makes the game more interesting. Players walk down the hall and see everything near them. When players reach at the end, they need to go back and check the area again. You can also check out <a href="https://train45apk.com" class=" text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors no-underline" target="_blank" rel="noopener noreferrer">Train 45</a> for another Android game.'
+      description: 'Room 801 is a repeating loop. This loop makes the game more interesting. Players walk down the hall and see everything near them. When players reach at the end, they need to go back and check the area again. You can also check out <span onclick="window.open(\'https://train45apk.com\', \'_blank\')" class="text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors cursor-pointer">Train 45</span> for another Android game.'
     },
     {
       title: "Anomaly Detection",
       category: "Gameplay Mechanics",
-      description: 'The core of Room 801 APK is a simple but have very difficult system of observation. The game challenges players to identify anomalies and irregularities in the environment. These details will tell you something is wrong. <a href="https://masterroyaleapk.com/" class=" text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors no-underline" target="_blank" rel="noopener noreferrer">Master royale</a> is a modified version of Clash Royale featuring unlimited gems and gold. Anomalies are supposed subtle and easy to detect.'
+      description: 'The core of Room 801 APK is a simple but have very difficult system of observation. The game challenges players to identify anomalies and irregularities in the environment. These details will tell you something is wrong. <span onclick="window.open(\'https://masterroyaleapk.com/\', \'_blank\')" class="text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors cursor-pointer">Master royale</span> is a modified version of Clash Royale featuring unlimited gems and gold. Anomalies are supposed subtle and easy to detect.'
     },
     {
       title: "Memory-Based Challenges",
       category: "Gameplay Mechanics",
-      description: 'The game checks how good the player is at remembering the surroundings. A small change may only show when the player compares the playthrough to a previous playthrough. This means memory and attention are key to the player\'s progress. <a href="https://thexupertvs.com/en-windows-pc-%d8%a3%d8%b1%d8%b9%d8%a9/" class=" text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors no-underline" target="_blank" rel="noopener noreferrer">Xuper tv pc</a> lets you stream live TV channels, movies, and shows on your computer.'
+      description: 'The game checks how good the player is at remembering the surroundings. A small change may only show when the player compares the playthrough to a previous playthrough. This means memory and attention are key to the player\'s progress. <span onclick="window.open(\'https://thexupertvs.com/en-windows-pc-%d8%a3%d8%b1%d8%b9%d8%a9/\', \'_blank\')" class="text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors cursor-pointer">Xuper tv pc</span> lets you stream live TV channels, movies, and shows on your computer.'
     },
     {
       title: "Simple Decision System",
       category: "Gameplay Mechanics",
-      description: 'Room 801 keeps its decisions simple. In Room 801, players must decide if the hallway looks normal or if it hides an anomaly. That decision tells players to keep walking or to turn. Room 801 is best for those players a goal who don\'t want complicated controls. <a href="https://sporttzx.com/" class=" text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors no-underline" target="_blank" rel="noopener noreferrer">Sportzx app</a> lets sports fans enjoy live matches and explore sports content in one place.'
+      description: 'Room 801 keeps its decisions simple. In Room 801, players must decide if the hallway looks normal or if it hides an anomaly. That decision tells players to keep walking or to turn. Room 801 is best for those players a goal who don\'t want complicated controls. <span onclick="window.open(\'https://sporttzx.com/\', \'_blank\')" class="text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors cursor-pointer">Sportzx app</span> lets sports fans enjoy live matches and explore sports content in one place.'
     },
     {
       title: "No Combat Gameplay",
       category: "Gameplay Mechanics",
-      description: 'Room 801 is not about weapons, fighting, or combating enemies. Players\' progress depends on observing their surroundings and choosing carefully. This makes the game different from action-based horror titles. <a href="https://xupershydra.com/" class=" text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors no-underline" target="_blank" rel="noopener noreferrer">xuper</a> offers entertainment and streaming options for users who enjoy watching content on compatible devices.'
+      description: 'Room 801 is not about weapons, fighting, or combating enemies. Players\' progress depends on observing their surroundings and choosing carefully. This makes the game different from action-based horror titles. <span onclick="window.open(\'https://xupershydra.com/\', \'_blank\')" class="text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors cursor-pointer">xuper</span> offers entertainment and streaming options for users who enjoy watching content on compatible devices.'
     },
     {
       title: "Multiple Endings",
       category: "Gameplay Mechanics",
-      description: 'Player decisions in Room 801 can lead to different outcomes. This way the game can have multiple endings and it pushes players to try different approaches and to enjoy exploring those possibilities. <a href="https://myroyaldreamapk.com/id/royal-dream-apk-id/" class=" text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors no-underline" target="_blank" rel="noopener noreferrer">Royal Dream Apk</a> offers fun gameplay and exciting features for Android users.'
+      description: 'Player decisions in Room 801 can lead to different outcomes. This way the game can have multiple endings and it pushes players to try different approaches and to enjoy exploring those possibilities. <span onclick="window.open(\'https://myroyaldreamapk.com/id/royal-dream-apk-id/\', \'_blank\')" class="text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors cursor-pointer">Royal Dream Apk</span> offers fun gameplay and exciting features for Android users.'
     },
     
     // Atmosphere & Audio
@@ -144,7 +144,7 @@ export default function Room801Features() {
                     #{index + 1}
                   </span>
                 </div>
-                {/* Pehle 6 items ke liye dangerouslySetInnerHTML use hoga taake sabhi links render ho sakein */}
+                {/* Pehle 6 items ke liye dangerouslySetInnerHTML use hoga taake sabhi clickable spans render ho sakein */}
                 {index >= 0 && index <= 5 && activeTab === 'All' ? (
                   <div 
                     className="text-sm sm:text-base text-[#a9b0ba] leading-relaxed"
