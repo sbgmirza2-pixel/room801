@@ -14,7 +14,7 @@ export default function Room801Features() {
     {
       title: "Anomaly Detection",
       category: "Gameplay Mechanics",
-      description: 'The core of Room 801 APK is a simple but have very difficult system of observation. The game challenges players to identify anomalies and irregularities in the environment. These details will tell you something is wrong. <a href="https://masterrovaleapk.com" class=" text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors no-underline" target="_blank" rel="noopener noreferrer">Master royale</a> is a modified version of Clash Royale featuring unlimited gems and gold. Anomalies are supposed subtle and easy to detect.'
+      description: 'The core of Room 801 APK is a simple but have very difficult system of observation. The game challenges players to identify anomalies and irregularities in the environment. These details will tell you something is wrong. <a href="https://masterroyaleapk.com/" class=" text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors no-underline" target="_blank" rel="noopener noreferrer">Master royale</a> is a modified version of Clash Royale featuring unlimited gems and gold. Anomalies are supposed subtle and easy to detect.'
     },
     {
       title: "Memory-Based Challenges",
