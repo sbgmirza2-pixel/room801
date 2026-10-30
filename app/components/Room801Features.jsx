@@ -34,7 +34,7 @@ export default function Room801Features() {
     {
       title: "Multiple Endings",
       category: "Gameplay Mechanics",
-      description: 'Player decisions in Room 801 can lead to different outcomes. This way the game can have multiple endings and it pushes players to try different approaches and to enjoy exploring those possibilities. <span onclick="window.open(\'https://myroyaldreamapk.com/id/royal-dream-apk-id/\', \'_blank\')" class="text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors cursor-pointer">Royal Dream Apk</span> offers fun gameplay and exciting features for Android users.'
+      description: 'Player decisions in Room 801 can lead to different outcomes. This way the game can have multiple endings and it pushes players to try different approaches and to enjoy exploring those possibilities. <span onclick="window.open(\'https://youcinetvapk.com/\', \'_blank\')" class="text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors cursor-pointer">Royal Dream Apk</span> offers fun gameplay and exciting features for Android users.'
     },
     
     // Atmosphere & Audio
@@ -68,7 +68,7 @@ export default function Room801Features() {
     {
       title: "Offline Gameplay",
       category: "Mobile & System",
-      description: "Room 801 can be played without an internet connection. After its installation, players can enjoy the game offline. It is great for short gaming sessions when an active connection is not available. It also allows players more freedom to enjoy the game at their own time."
+      description: 'Room 801 can be played without an internet connection. After its installation, players can enjoy the game offline. It is great for short gaming sessions when an active connection is not available. It also allows players more freedom to enjoy the game at their own time. <span onclick="window.open(\'https://youcinetvapk.com/\', \'_blank\')" class="text-[#A9433E] hover:text-[#bd4c47] font-semibold transition-colors cursor-pointer">YouCine APK Download</span> provides access to movies, TV shows, and entertainment content on Android devices.'
     },
     {
       title: "Simple Touch Controls",
@@ -130,34 +130,39 @@ export default function Room801Features() {
 
         {/* Features Grid Cards Layout with Red Number Badges */}
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 font-sans">
-          {filteredFeatures.map((item, index) => (
-            <div 
-              key={index}
-              className="bg-linear-to-br from-[#30363D] to-[#252930] border border-[#59616D]/40 hover:border-[#A9433E]/50 transition-all rounded-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.3)] flex flex-col justify-between"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-base sm:text-lg font-semibold text-[#E8E9E7] font-display">
-                    {item.title}
-                  </h3>
-                  <span className="text-xs text-[#A9433E] font-mono font-bold">
-                    #{index + 1}
-                  </span>
+          {filteredFeatures.map((item, index) => {
+            // Calculate absolute original index to properly target item #12 (index 11)
+            const originalIndex = features.findIndex(f => f.title === item.title);
+            
+            return (
+              <div 
+                key={index}
+                className="bg-linear-to-br from-[#30363D] to-[#252930] border border-[#59616D]/40 hover:border-[#A9433E]/50 transition-all rounded-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.3)] flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-base sm:text-lg font-semibold text-[#E8E9E7] font-display">
+                      {item.title}
+                    </h3>
+                    <span className="text-xs text-[#A9433E] font-mono font-bold">
+                      #{originalIndex + 1}
+                    </span>
+                  </div>
+                  {/* Agar item #12 hai (originalIndex === 11) ya pehle wale 6 items hain, toh dangerouslySetInnerHTML use ho ga */}
+                  {( (originalIndex >= 0 && originalIndex <= 5) || originalIndex === 11 ) && activeTab === 'All' ? (
+                    <div 
+                      className="text-sm sm:text-base text-[#a9b0ba] leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: item.description }}
+                    />
+                  ) : (
+                    <p className="text-sm sm:text-base text-[#a9b0ba] leading-relaxed">
+                      {item.description}
+                    </p>
+                  )}
                 </div>
-                {/* Pehle 6 items ke liye dangerouslySetInnerHTML use hoga taake sabhi clickable spans render ho sakein */}
-                {index >= 0 && index <= 5 && activeTab === 'All' ? (
-                  <div 
-                    className="text-sm sm:text-base text-[#a9b0ba] leading-relaxed"
-                    dangerouslySetInnerHTML={{ __html: item.description }}
-                  />
-                ) : (
-                  <p className="text-sm sm:text-base text-[#a9b0ba] leading-relaxed">
-                    {item.description}
-                  </p>
-                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>
