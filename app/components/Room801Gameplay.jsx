@@ -45,7 +45,17 @@ export default function Room801Gameplay() {
 
         {/* Introduction Context */}
         <p className="text-sm sm:text-base text-[#a9b0ba] max-w-2xl leading-relaxed mb-6 font-sans">
-          Here are the main steps that explain how the Room 801 gameplay works:
+          Here are the main steps that explain how the Room 801 gameplay works:{" "}
+          Si quieres disfrutar de tus canales de televisión, películas y programas favoritos en un solo lugar, puedes{" "}
+          <a
+            href="https://xuperrstv.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#A9433E] hover:underline font-semibold"
+          >
+            descargar Xuper TV
+          </a>{" "}
+          para acceder fácilmente a todo tu contenido de entretenimiento.
         </p>
 
         {/* Gameplay Steps Clean List */}
