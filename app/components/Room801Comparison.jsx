@@ -27,7 +27,16 @@ export default function Room801Comparison() {
           Room 801 vs <span className="text-[#A9433E]">Other Horror Games</span>
         </h2>
         <p className="text-sm sm:text-base text-[#747d8a] mb-6">
-          Here's the comparison of Room 801 with other Horror Games:
+          Here's the comparison of Room 801 with other{" "}
+          <a
+            href="https://funox.com/en/horror-games"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#A9433E] hover:underline font-medium"
+          >
+            Horror Games
+          </a>
+          :
         </p>
 
         {/* Horizontal Divider Line */}
